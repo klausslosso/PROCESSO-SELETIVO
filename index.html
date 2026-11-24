@@ -1,0 +1,4126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline'; connect-src 'self' https://gcpfsqanznlmfqhdemic.supabase.co https://viacep.com.br; img-src 'self' data:; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self';">
+  <meta name="referrer" content="no-referrer">
+  <meta name="description" content="Inscrição pública gratuita para o Processo Seletivo 2027 do Centro de Capacitação Profissional (CCP) — SDETR — Prefeitura Municipal de Iguaba Grande / RJ.">
+  <title>Inscrição Gratuita — CCP 2027 | Prefeitura de Iguaba Grande</title>
+  <style>
+    :root {
+      --green-primary: #0b6b4b;
+      --green-dark: #064e3b;
+      --green-hover: #085a3f;
+      --green-soft: #ecfdf5;
+      --green-border: #a7f3d0;
+      --green-ring: rgba(11, 107, 75, 0.22);
+
+      --bg-page: #f4f7f5;
+      --bg-surface: #ffffff;
+      --bg-subtle: #f7faf8;
+      --bg-hover-green: #f2fbf7;
+      --border-neutral: #cbd5d0;
+      --border-soft: #e2e8e5;
+
+      --text-primary: #111827;
+      --text-secondary: #374151;
+      --text-muted: #4b5563;
+
+      --error-text: #b91c1c;
+      --error-bg: #fef2f2;
+      --error-border: #fca5a5;
+
+      --warning-text: #92400e;
+      --warning-bg: #fffbeb;
+      --warning-border: #fcd34d;
+
+      --radius-sm: 10px;
+      --radius-md: 14px;
+      --radius-lg: 18px;
+      --shadow-sm: 0 2px 8px rgba(6, 78, 59, 0.06);
+      --shadow-md: 0 10px 28px rgba(6, 78, 59, 0.09);
+      --shadow-selected: 0 4px 14px rgba(6, 78, 59, 0.11);
+      --font-sans: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    ::selection {
+      background: var(--green-border);
+      color: var(--green-dark);
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      margin: 0;
+      font-family: var(--font-sans);
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.6;
+      color: var(--text-primary);
+      background-color: var(--bg-page);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    body.has-sticky-bar {
+      padding-bottom: 108px;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+      top: 0;
+      background: var(--green-dark);
+      color: #ffffff;
+      padding: 0.85rem 1.2rem;
+      z-index: 1000;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .skip-link:focus {
+      left: 0;
+    }
+
+    /* =====================================================================
+       CABEÇALHO INSTITUCIONAL (FAIXA BRANCA + DESTAQUE VERDE)
+       ===================================================================== */
+    .site-header {
+      background: #ffffff;
+      border-bottom: 4px solid var(--green-primary);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .logo-bar {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 0.9rem 1.15rem 0.8rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .official-logo {
+      display: block;
+      width: 100%;
+      max-width: 390px;
+      height: auto;
+      object-fit: contain;
+    }
+
+    .program-strip {
+      background: var(--green-primary);
+      color: #ffffff;
+      text-align: center;
+      padding: 0.7rem 1rem;
+    }
+
+    .program-strip-title {
+      margin: 0;
+      font-size: 1.05rem;
+      font-weight: 800;
+      letter-spacing: 0.01em;
+      line-height: 1.3;
+      text-wrap: balance;
+    }
+
+    .program-strip-sub {
+      margin: 0.2rem 0 0;
+      font-size: 0.9rem;
+      color: #e6f7ef;
+    }
+
+    /* =====================================================================
+       CONTAINER PRINCIPAL E BARRA DE PROGRESSO
+       ===================================================================== */
+    .main-container {
+      width: 100%;
+      max-width: 720px;
+      margin: 1.25rem auto 2.5rem;
+      padding: 0 0.9rem;
+      flex: 1;
+    }
+
+    .progress-card {
+      background: var(--bg-surface);
+      border: 1.5px solid var(--border-soft);
+      border-radius: var(--radius-md);
+      padding: 1rem 1.15rem;
+      margin-bottom: 1.1rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .progress-top {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem 0.75rem;
+      margin-bottom: 0.65rem;
+    }
+
+    .progress-step-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: var(--green-soft);
+      color: var(--green-dark);
+      border: 1px solid var(--green-border);
+      font-size: 0.9rem;
+      font-weight: 800;
+      font-variant-numeric: tabular-nums;
+      padding: 0.28rem 0.75rem;
+      border-radius: 999px;
+    }
+
+    .progress-step-name {
+      font-size: 0.94rem;
+      font-weight: 700;
+      color: var(--text-secondary);
+      text-align: right;
+    }
+
+    .progress-track {
+      width: 100%;
+      height: 10px;
+      background: var(--border-soft);
+      border-radius: 999px;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      width: 20%;
+      background: linear-gradient(90deg, var(--green-primary) 0%, #10b981 100%);
+      border-radius: 999px;
+      transition: width 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    /* =====================================================================
+       CARTÃO DE CADA PASSO DO WIZARD
+       ===================================================================== */
+    .wizard-card {
+      background: var(--bg-surface);
+      border: 1.5px solid var(--border-soft);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem 1.25rem 1.55rem;
+      box-shadow: var(--shadow-md);
+    }
+
+    .step-heading {
+      margin: 0 0 0.4rem;
+      font-size: 1.42rem;
+      font-weight: 700;
+      letter-spacing: -0.015em;
+      color: var(--green-dark);
+      line-height: 1.28;
+      text-wrap: balance;
+    }
+
+    .step-subtitle {
+      margin: 0 0 1.4rem;
+      font-size: 1rem;
+      font-weight: 400;
+      color: var(--text-secondary);
+      line-height: 1.58;
+    }
+
+    .chosen-chip {
+      display: inline-flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.4rem;
+      background: var(--green-soft);
+      border: 1.5px solid var(--green-border);
+      color: var(--text-secondary);
+      border-radius: var(--radius-sm);
+      padding: 0.72rem 0.95rem;
+      font-size: 0.98rem;
+      font-weight: 500;
+      line-height: 1.5;
+      margin-bottom: 1.25rem;
+      width: 100%;
+    }
+
+    #step2CursoName {
+      font-weight: 700;
+      color: var(--green-dark);
+    }
+
+    /* =====================================================================
+       CARDS GRANDES CLICÁVEIS (PASSO 1 E PASSO 2 — LIMPOS E AREJADOS)
+       ===================================================================== */
+    .choice-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.1rem;
+    }
+
+    .choice-card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+      width: 100%;
+      text-align: left;
+      background: #ffffff;
+      border: 2px solid var(--border-neutral);
+      border-radius: var(--radius-md);
+      padding: 1.35rem;
+      cursor: pointer;
+      transition: border-color 0.16s ease, background-color 0.16s ease, box-shadow 0.16s ease, transform 0.06s ease;
+    }
+
+    .choice-card:hover:not(.is-disabled) {
+      border-color: var(--green-primary);
+      background: var(--bg-hover-green);
+    }
+
+    .choice-card:active:not(.is-disabled) {
+      transform: scale(0.995);
+    }
+
+    .choice-card:focus-visible {
+      outline: 3px solid var(--green-primary);
+      outline-offset: 2px;
+    }
+
+    .choice-card.is-selected {
+      border-color: var(--green-primary);
+      background: var(--green-soft);
+      box-shadow: var(--shadow-selected);
+    }
+
+    .choice-card.is-disabled {
+      opacity: 0.65;
+      background: var(--bg-subtle);
+      cursor: not-allowed;
+    }
+
+    .choice-card-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 0.9rem;
+    }
+
+    .choice-card-title {
+      font-size: 1.18rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1.35;
+      min-width: 0;
+      overflow-wrap: anywhere;
+    }
+
+    .choice-select-badge {
+      flex-shrink: 0;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.3rem;
+      padding: 0.36rem 0.85rem;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      border: 1.5px solid var(--green-primary);
+      background: #ffffff;
+      color: var(--green-primary);
+      white-space: nowrap;
+      transition: background-color 0.15s, color 0.15s, border-color 0.15s;
+    }
+
+    .choice-card.is-selected .choice-select-badge {
+      background: var(--green-primary);
+      border-color: var(--green-primary);
+      color: #ffffff;
+    }
+
+    .choice-card.is-disabled .choice-select-badge {
+      border-color: var(--border-neutral);
+      background: var(--border-soft);
+      color: var(--text-muted);
+    }
+
+    .choice-support-line {
+      margin: 0;
+      font-size: 0.98rem;
+      font-weight: 400;
+      color: var(--text-secondary);
+      line-height: 1.55;
+    }
+
+    .choice-support-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+    }
+
+    .meta-pill {
+      display: inline-flex;
+      align-items: center;
+      font-size: 0.9rem;
+      font-weight: 600;
+      padding: 0.25rem 0.7rem;
+      border-radius: 999px;
+      background: var(--border-soft);
+      color: var(--text-secondary);
+    }
+
+    .meta-pill-green {
+      background: #d1fae5;
+      color: var(--green-dark);
+    }
+
+    .syllabus-link {
+      align-self: flex-start;
+      margin-top: 0.1rem;
+      background: none;
+      border: none;
+      border-radius: 6px;
+      padding: 0.25rem 0.15rem;
+      color: var(--green-primary);
+      font-family: inherit;
+      font-size: 0.96rem;
+      font-weight: 600;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      cursor: pointer;
+    }
+
+    .syllabus-link:hover {
+      color: var(--green-dark);
+    }
+
+    .syllabus-link:focus-visible {
+      outline: 3px solid var(--green-primary);
+      outline-offset: 2px;
+    }
+
+    .syllabus-box {
+      margin-top: 0.25rem;
+      padding: 0.95rem 1rem;
+      background: #ffffff;
+      border: 1.5px solid var(--green-border);
+      border-radius: var(--radius-sm);
+      font-size: 0.96rem;
+      font-weight: 400;
+      color: var(--text-secondary);
+      white-space: pre-line;
+      line-height: 1.6;
+    }
+
+    /* =====================================================================
+       CAMPOS DE FORMULÁRIO ACESSÍVEIS E BLOCOS DE OPCIONAIS
+       ===================================================================== */
+    .fields-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 1.35rem;
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .field label,
+    .field-group-label {
+      font-size: 1.04rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      line-height: 1.4;
+    }
+
+    .req-badge {
+      color: var(--error-text);
+      font-weight: 700;
+      margin-left: 3px;
+    }
+
+    .opt-pill {
+      display: inline-block;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      background: #eef3f0;
+      border: 1px solid var(--border-neutral);
+      padding: 0.08rem 0.55rem;
+      border-radius: 999px;
+      margin-left: 0.45rem;
+      vertical-align: middle;
+    }
+
+    .field-help {
+      font-size: 0.94rem;
+      font-weight: 400;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    .optional-group {
+      background: var(--bg-subtle);
+      border: 1.5px solid var(--border-soft);
+      border-radius: var(--radius-md);
+      padding: 1.25rem 1.15rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+      margin-top: 0.25rem;
+    }
+
+    .optional-group-title {
+      margin: 0;
+      font-size: 0.94rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      line-height: 1.45;
+    }
+
+    .field input[type="text"],
+    .field input[type="email"],
+    .field input[type="tel"],
+    .field input[type="date"],
+    .field select {
+      width: 100%;
+      font-family: inherit;
+      font-size: 1.06rem;
+      color: var(--text-primary);
+      caret-color: var(--green-primary);
+      background-color: #ffffff;
+      border: 2px solid var(--border-neutral);
+      border-radius: var(--radius-sm);
+      padding: 0.78rem 0.95rem;
+      min-height: 54px;
+      transition: border-color 0.15s, box-shadow 0.15s, background-color 0.15s;
+    }
+
+    .field input::placeholder {
+      color: #6b7280;
+      opacity: 1;
+    }
+
+    .field select {
+      appearance: none;
+      -webkit-appearance: none;
+      padding-right: 2.75rem;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20' fill='none'%3E%3Cpath d='M5.5 7.75L10 12.25L14.5 7.75' stroke='%23064e3b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 0.9rem center;
+      background-size: 20px 20px;
+      cursor: pointer;
+    }
+
+    #cpfInput,
+    #telefoneInput,
+    #cepInput {
+      font-variant-numeric: tabular-nums;
+    }
+
+    .field input:focus,
+    .field select:focus {
+      outline: 2px solid transparent;
+      border-color: var(--green-primary);
+      box-shadow: 0 0 0 4px var(--green-ring);
+    }
+
+    .field input.is-valid,
+    .field select.is-valid {
+      border-color: var(--green-primary);
+      background-color: #f6fdf9;
+    }
+
+    .field input.is-invalid,
+    .field select.is-invalid {
+      border-color: var(--error-text);
+      background-color: var(--error-bg);
+    }
+
+    .field-feedback {
+      font-size: 0.92rem;
+      font-weight: 700;
+      line-height: 1.4;
+    }
+
+    .field-feedback:empty {
+      display: none;
+    }
+
+    .field-feedback.is-valid {
+      color: var(--green-primary);
+    }
+
+    .field-feedback.is-error {
+      color: var(--error-text);
+    }
+
+    .field-feedback.is-info {
+      color: var(--green-dark);
+    }
+
+    /* Botões de Seleção Rápida (Sexo / Sim-Não) */
+    .toggle-btn-group {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.65rem;
+    }
+
+    .toggle-btn-group-3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .toggle-choice-btn {
+      font-family: inherit;
+      font-size: 1.02rem;
+      font-weight: 700;
+      min-height: 52px;
+      padding: 0.65rem 0.75rem;
+      border-radius: var(--radius-sm);
+      border: 2px solid var(--border-neutral);
+      background: #ffffff;
+      color: var(--text-primary);
+      cursor: pointer;
+      transition: background-color 0.15s, border-color 0.15s, color 0.15s, box-shadow 0.15s;
+    }
+
+    .toggle-choice-btn:hover {
+      border-color: var(--green-primary);
+      background: var(--bg-hover-green);
+    }
+
+    .toggle-choice-btn:focus-visible {
+      outline: 3px solid var(--green-primary);
+      outline-offset: 2px;
+    }
+
+    .toggle-choice-btn.is-active {
+      background: var(--green-primary);
+      border-color: var(--green-primary);
+      color: #ffffff;
+      box-shadow: 0 2px 6px rgba(6, 78, 59, 0.18);
+    }
+
+    .toggle-choice-btn.is-active:hover {
+      background: var(--green-hover);
+      border-color: var(--green-hover);
+    }
+
+    .conditional-detail {
+      margin-top: 0.65rem;
+    }
+
+    /* Resumo no Passo 5 */
+    .summary-box {
+      background: var(--green-soft);
+      border: 1.5px solid var(--green-border);
+      border-radius: var(--radius-md);
+      padding: 1.05rem 1.15rem;
+      margin-bottom: 1.35rem;
+    }
+
+    .summary-box-title {
+      font-size: 0.86rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--green-dark);
+      margin: 0 0 0.5rem;
+    }
+
+    .summary-line {
+      font-size: 0.98rem;
+      color: var(--text-secondary);
+      margin: 0.25rem 0;
+    }
+
+    .summary-line span {
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+
+    /* Caixa LGPD destacada */
+    .lgpd-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.85rem;
+      padding: 1.1rem;
+      border-radius: var(--radius-md);
+      border: 2px solid var(--green-primary);
+      background: var(--green-soft);
+      cursor: pointer;
+      transition: background-color 0.15s, border-color 0.15s, box-shadow 0.15s;
+    }
+
+    .lgpd-card:hover {
+      background: #e3faef;
+    }
+
+    .lgpd-card:focus-within {
+      box-shadow: 0 0 0 4px var(--green-ring);
+    }
+
+    .lgpd-card.is-invalid {
+      border-color: var(--error-text);
+      background: var(--error-bg);
+    }
+
+    .lgpd-card input[type="checkbox"] {
+      width: 26px;
+      height: 26px;
+      margin-top: 2px;
+      flex-shrink: 0;
+      accent-color: var(--green-primary);
+      cursor: pointer;
+    }
+
+    .lgpd-text {
+      font-size: 1rem;
+      color: var(--text-primary);
+      line-height: 1.48;
+    }
+
+    .link-btn {
+      background: none;
+      border: none;
+      border-radius: 4px;
+      padding: 0 2px;
+      font: inherit;
+      color: var(--green-dark);
+      font-weight: 800;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      cursor: pointer;
+    }
+
+    .link-btn:focus-visible {
+      outline: 3px solid var(--green-primary);
+      outline-offset: 2px;
+    }
+
+    /* =====================================================================
+       ALERTAS E CARREGAMENTO
+       ===================================================================== */
+    .alert {
+      padding: 1rem 1.1rem;
+      border-radius: var(--radius-md);
+      margin-bottom: 1.1rem;
+      font-size: 1rem;
+      border: 2px solid transparent;
+    }
+
+    .alert-error {
+      background: var(--error-bg);
+      border-color: var(--error-border);
+      color: var(--error-text);
+    }
+
+    .alert-title {
+      font-weight: 800;
+      margin-bottom: 0.25rem;
+    }
+
+    .alert-actions {
+      margin-top: 0.75rem;
+    }
+
+    .loading-box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.8rem;
+      padding: 2rem 1rem;
+      background: var(--bg-surface);
+      border: 1.5px solid var(--border-soft);
+      border-radius: var(--radius-lg);
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--green-dark);
+      margin-bottom: 1rem;
+    }
+
+    .spinner {
+      width: 22px;
+      height: 22px;
+      border: 3px solid rgba(255, 255, 255, 0.35);
+      border-top-color: #ffffff;
+      border-radius: 50%;
+      animation: spin 0.75s linear infinite;
+      display: inline-block;
+      flex-shrink: 0;
+    }
+
+    .spinner-green {
+      border-color: rgba(11, 107, 75, 0.22);
+      border-top-color: var(--green-primary);
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    /* =====================================================================
+       BOTÕES GRANDES DE NAVEGAÇÃO (ALTURA MÍNIMA 54px)
+       ===================================================================== */
+    .wizard-nav {
+      display: flex;
+      flex-direction: column-reverse;
+      gap: 0.75rem;
+      margin-top: 1.5rem;
+      padding-top: 1.15rem;
+      border-top: 1.5px solid var(--border-soft);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.55rem;
+      font-family: inherit;
+      font-size: 1.06rem;
+      font-weight: 800;
+      border-radius: var(--radius-sm);
+      padding: 0.85rem 1.35rem;
+      min-height: 54px;
+      border: 2px solid transparent;
+      cursor: pointer;
+      transition: background-color 0.15s, border-color 0.15s, box-shadow 0.15s, transform 0.06s, opacity 0.15s;
+      width: 100%;
+    }
+
+    .btn:focus-visible {
+      outline: 3px solid var(--green-primary);
+      outline-offset: 2px;
+    }
+
+    .btn:active:not(:disabled) {
+      transform: translateY(1px);
+    }
+
+    .btn:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+
+    .btn-primary {
+      background: var(--green-primary);
+      color: #ffffff;
+    }
+
+    .btn-primary:hover:not(:disabled) {
+      background: var(--green-hover);
+    }
+
+    .btn-finish {
+      background: var(--green-primary);
+      color: #ffffff;
+      min-height: 60px;
+      font-size: 1.1rem;
+      letter-spacing: 0.02em;
+      box-shadow: 0 4px 14px rgba(6, 78, 59, 0.22);
+    }
+
+    .btn-finish:hover:not(:disabled) {
+      background: var(--green-hover);
+      box-shadow: 0 6px 18px rgba(6, 78, 59, 0.28);
+    }
+
+    .btn-secondary {
+      background: #ffffff;
+      color: var(--green-dark);
+      border-color: var(--green-primary);
+    }
+
+    .btn-secondary:hover:not(:disabled) {
+      background: var(--green-soft);
+    }
+
+    .btn-sm {
+      font-size: 0.92rem;
+      min-height: 44px;
+      padding: 0.5rem 0.95rem;
+      width: auto;
+    }
+
+    /* =====================================================================
+       COMPROVANTE DE INSCRIÇÃO (TELA E IMPRESSÃO A4)
+       ===================================================================== */
+    .receipt-card {
+      background: #ffffff;
+      border: 2px solid var(--green-primary);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-md);
+      overflow: hidden;
+    }
+
+    .receipt-header-white {
+      background: #ffffff;
+      padding: 1.25rem 1.25rem 1rem;
+      text-align: center;
+      border-bottom: 4px solid var(--green-primary);
+    }
+
+    .receipt-logo {
+      display: block;
+      margin: 0 auto 0.75rem;
+      width: 100%;
+      max-width: 340px;
+      height: auto;
+      object-fit: contain;
+    }
+
+    .receipt-title {
+      margin: 0;
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: var(--green-dark);
+      text-wrap: balance;
+    }
+
+    .receipt-subtitle {
+      margin: 0.2rem 0 0;
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    .receipt-body {
+      padding: 1.35rem;
+    }
+
+    .receipt-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      background: var(--green-soft);
+      color: var(--green-dark);
+      border: 1.5px solid var(--green-border);
+      padding: 0.4rem 0.9rem;
+      border-radius: 999px;
+      font-size: 0.95rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+    }
+
+    .protocol-box {
+      background: var(--green-soft);
+      border: 2px dashed var(--green-primary);
+      border-radius: var(--radius-md);
+      padding: 1rem 1.15rem;
+      text-align: center;
+      margin-bottom: 1.15rem;
+    }
+
+    .protocol-label {
+      font-size: 0.84rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 800;
+      color: var(--green-dark);
+    }
+
+    .protocol-value {
+      font-size: 1.85rem;
+      font-weight: 900;
+      letter-spacing: 0.06em;
+      font-variant-numeric: tabular-nums;
+      color: var(--green-dark);
+      margin: 0.25rem 0;
+      word-break: break-all;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    }
+
+    .protocol-copy-wrap {
+      margin-top: 0.5rem;
+    }
+
+    .receipt-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.7rem;
+      margin-bottom: 1.15rem;
+    }
+
+    .receipt-item {
+      padding: 0.72rem 0.88rem;
+      background: var(--bg-subtle);
+      border: 1px solid var(--border-soft);
+      border-radius: var(--radius-sm);
+    }
+
+    .receipt-item-label {
+      font-size: 0.78rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--text-muted);
+      margin-bottom: 0.15rem;
+    }
+
+    .receipt-item-value {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      word-break: break-word;
+    }
+
+    .receipt-instructions {
+      background: var(--warning-bg);
+      border: 1.5px solid var(--warning-border);
+      border-radius: var(--radius-md);
+      padding: 1rem 1.15rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .receipt-instructions h3 {
+      margin: 0 0 0.5rem;
+      font-size: 1rem;
+      color: var(--warning-text);
+    }
+
+    .receipt-instructions p {
+      margin: 0 0 0.5rem;
+      font-size: 0.92rem;
+      color: var(--text-primary);
+    }
+
+    .receipt-instructions p:last-child {
+      margin-bottom: 0;
+    }
+
+    .receipt-instructions ul {
+      margin: 0.35rem 0 0.5rem;
+      padding-left: 1.25rem;
+      font-size: 0.91rem;
+      color: var(--text-primary);
+    }
+
+    .receipt-instructions li {
+      margin-bottom: 0.28rem;
+    }
+
+    .receipt-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .receipt-footnote {
+      margin-top: 1rem;
+      padding-top: 0.8rem;
+      border-top: 1px solid #e5e7eb;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      text-align: center;
+    }
+
+    /* =====================================================================
+       MODAL LGPD
+       ===================================================================== */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(6, 30, 22, 0.62);
+      backdrop-filter: blur(2px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      z-index: 900;
+    }
+
+    .modal-dialog {
+      background: #ffffff;
+      width: 100%;
+      max-width: 620px;
+      max-height: 88vh;
+      border-radius: var(--radius-lg);
+      box-shadow: 0 20px 48px rgba(6, 30, 22, 0.28);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      animation: modalIn 0.2s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    @keyframes modalIn {
+      from {
+        opacity: 0;
+        transform: translateY(8px) scale(0.985);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    .modal-header {
+      padding: 1.05rem 1.25rem;
+      background: var(--green-primary);
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-shrink: 0;
+    }
+
+    .modal-header h2 {
+      margin: 0;
+      font-size: 1.1rem;
+    }
+
+    .modal-close {
+      background: rgba(255, 255, 255, 0.18);
+      border: none;
+      color: #ffffff;
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+      font-size: 1.45rem;
+      line-height: 1;
+      cursor: pointer;
+      transition: background-color 0.15s;
+    }
+
+    .modal-close:hover {
+      background: rgba(255, 255, 255, 0.3);
+    }
+
+    .modal-close:focus-visible {
+      outline: 3px solid #ffffff;
+      outline-offset: 2px;
+    }
+
+    .modal-body {
+      padding: 1.25rem;
+      overflow-y: auto;
+      font-size: 0.96rem;
+      color: var(--text-primary);
+      scrollbar-width: thin;
+      scrollbar-color: var(--green-border) transparent;
+    }
+
+    .modal-body h3 {
+      margin: 1rem 0 0.35rem;
+      font-size: 1rem;
+      color: var(--green-dark);
+    }
+
+    .modal-body h3:first-child {
+      margin-top: 0;
+    }
+
+    .modal-body p,
+    .modal-body ul {
+      margin: 0 0 0.65rem;
+    }
+
+    .modal-body ul {
+      padding-left: 1.25rem;
+    }
+
+    .modal-footer {
+      padding: 0.95rem 1.25rem;
+      background: var(--bg-subtle);
+      border-top: 1px solid var(--border-soft);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 0.65rem;
+      flex-shrink: 0;
+    }
+
+    /* =====================================================================
+       RODAPÉ
+       ===================================================================== */
+    .site-footer {
+      background: #ffffff;
+      border-top: 1px solid var(--border-soft);
+      padding: 1.1rem 1rem;
+      text-align: center;
+      font-size: 0.86rem;
+      color: var(--text-muted);
+    }
+
+    .site-footer p {
+      margin: 0.2rem 0;
+    }
+
+    /* =====================================================================
+       RESPONSIVO TABLET / DESKTOP E TELAS MUITO ESTREITAS
+       ===================================================================== */
+    @media (max-width: 390px) {
+      .toggle-btn-group-3 {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (min-width: 640px) {
+      .wizard-card {
+        padding: 2rem 2.25rem;
+      }
+
+      .step-heading {
+        font-size: 1.55rem;
+      }
+
+      .wizard-nav {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      .wizard-nav .btn {
+        width: auto;
+        min-width: 190px;
+      }
+
+      .wizard-nav .btn-primary,
+      .wizard-nav .btn-finish {
+        margin-left: auto;
+      }
+
+      .receipt-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .receipt-actions {
+        flex-direction: row;
+      }
+
+      .receipt-actions .btn {
+        flex: 1;
+      }
+    }
+
+    /* =====================================================================
+       TELA INICIAL (PROCESSO SELETIVO + CPF) E PAINEL DO CANDIDATO
+       ===================================================================== */
+    .processo-status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.36rem 0.9rem;
+      border-radius: 999px;
+      font-size: 0.86rem;
+      font-weight: 800;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      margin-bottom: 0.85rem;
+    }
+
+    .processo-status-pill.is-open {
+      background: var(--green-soft);
+      color: var(--green-dark);
+      border: 1.5px solid var(--green-border);
+    }
+
+    .processo-status-pill.is-closed {
+      background: var(--error-bg);
+      color: var(--error-text);
+      border: 1.5px solid var(--error-border);
+    }
+
+    .closed-notice {
+      background: var(--warning-bg);
+      border: 2px solid var(--warning-border);
+      color: var(--warning-text);
+      border-radius: var(--radius-md);
+      padding: 1rem 1.15rem;
+      margin-bottom: 1.2rem;
+      font-size: 0.98rem;
+      line-height: 1.48;
+    }
+
+    .field input.cpf-gate-input {
+      font-size: 1.32rem;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      font-variant-numeric: tabular-nums;
+      text-align: center;
+      min-height: 58px;
+    }
+
+    .existing-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.95rem;
+      margin-bottom: 1.35rem;
+    }
+
+    .existing-item {
+      background: var(--bg-subtle);
+      border: 2px solid var(--green-border);
+      border-radius: var(--radius-md);
+      padding: 1.1rem 1.15rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.55rem;
+    }
+
+    .existing-item-top {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+    }
+
+    .existing-proto {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 0.96rem;
+      font-weight: 900;
+      font-variant-numeric: tabular-nums;
+      color: var(--green-dark);
+      background: var(--green-soft);
+      border: 1px solid var(--green-border);
+      padding: 0.25rem 0.65rem;
+      border-radius: 8px;
+    }
+
+    .existing-course {
+      font-size: 1.12rem;
+      font-weight: 800;
+      color: var(--text-primary);
+    }
+
+    .existing-meta {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+    }
+
+    .existing-reprint-btn {
+      margin-top: 0.35rem;
+    }
+
+    .next-steps-box {
+      background: var(--green-soft);
+      border: 2px solid var(--green-border);
+      border-radius: var(--radius-md);
+      padding: 1.1rem 1.15rem;
+      margin-top: 1.1rem;
+    }
+
+    .next-steps-title {
+      margin: 0 0 0.5rem;
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: var(--green-dark);
+    }
+
+    .next-steps-body {
+      margin: 0;
+      font-size: 0.96rem;
+      color: var(--text-primary);
+      white-space: pre-line;
+      line-height: 1.55;
+    }
+
+    .gate-actions-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      margin-top: 1.15rem;
+    }
+
+    /* =====================================================================
+       BARRA FIXA INFERIOR NO CELULAR (STICKY BOTTOM BAR — PASSOS 1 E 2)
+       ===================================================================== */
+    .mobile-sticky-bar {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 450;
+      background: #ffffff;
+      border-top: 2px solid var(--green-border);
+      box-shadow: 0 -6px 20px rgba(6, 78, 59, 0.14);
+      padding: 0.75rem 1rem calc(0.75rem + env(safe-area-inset-bottom, 0px));
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+    }
+
+    .mobile-sticky-label {
+      font-size: 0.94rem;
+      font-weight: 600;
+      color: var(--green-dark);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      text-align: center;
+    }
+
+    @media (min-width: 640px) {
+      .mobile-sticky-bar {
+        display: none !important;
+      }
+
+      body.has-sticky-bar {
+        padding-bottom: 0;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+    /* =====================================================================
+       IMPRESSÃO (1 ÚNICA PÁGINA A4 COM LOGO NÍTIDA)
+       ===================================================================== */
+    @media print {
+      @page {
+        size: A4 portrait;
+        margin: 10mm;
+      }
+
+      html,
+      body {
+        display: block !important;
+        min-height: auto !important;
+        height: auto !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        background: #ffffff !important;
+        color: #000000 !important;
+        font-size: 9.5pt !important;
+        line-height: 1.35 !important;
+      }
+
+      .no-print,
+      .site-header,
+      #progressCard,
+      #mobileStickyBar,
+      #cpfGateSection,
+      #existingCandidateSection,
+      #formSection,
+      .site-footer,
+      .modal-backdrop,
+      .receipt-actions,
+      .protocol-copy-wrap {
+        display: none !important;
+      }
+
+      .main-container {
+        display: block !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        max-width: 100% !important;
+        width: 100% !important;
+      }
+
+      #receiptSection {
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+
+      .receipt-card {
+        border: 1.2pt solid #0b6b4b !important;
+        box-shadow: none !important;
+        border-radius: 5pt !important;
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+
+      .receipt-header-white {
+        background: #ffffff !important;
+        padding: 8pt 12pt 7pt !important;
+        border-bottom: 2pt solid #0b6b4b !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      .receipt-logo {
+        max-width: 105mm !important;
+        margin: 0 auto 5pt !important;
+      }
+
+      .receipt-title {
+        font-size: 11.5pt !important;
+        color: #064e3b !important;
+      }
+
+      .receipt-subtitle {
+        font-size: 8pt !important;
+      }
+
+      .receipt-body {
+        padding: 8pt 12pt !important;
+      }
+
+      .receipt-status {
+        padding: 2pt 8pt !important;
+        font-size: 8.2pt !important;
+        margin-bottom: 6pt !important;
+        background: #ecfdf5 !important;
+        color: #064e3b !important;
+        border: 0.75pt solid #a7f3d0 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      .protocol-box {
+        background: #ecfdf5 !important;
+        border: 1.2pt dashed #0b6b4b !important;
+        padding: 5.5pt 10pt !important;
+        margin-bottom: 7pt !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      .protocol-label {
+        font-size: 7pt !important;
+      }
+
+      .protocol-value {
+        font-size: 15pt !important;
+        margin: 1.5pt 0 0 !important;
+      }
+
+      .receipt-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 4.5pt !important;
+        margin-bottom: 7pt !important;
+      }
+
+      .receipt-item {
+        background: #f9fafb !important;
+        border: 0.6pt solid #d1d5db !important;
+        padding: 4pt 6.5pt !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      .receipt-item-label {
+        font-size: 6.5pt !important;
+        margin-bottom: 1pt !important;
+      }
+
+      .receipt-item-value {
+        font-size: 8.8pt !important;
+        line-height: 1.25 !important;
+      }
+
+      .receipt-instructions {
+        background: #fffbeb !important;
+        border: 0.75pt solid #d97706 !important;
+        padding: 6.5pt 9pt !important;
+        margin-bottom: 5pt !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      .receipt-instructions h3 {
+        font-size: 9pt !important;
+        margin: 0 0 3pt !important;
+      }
+
+      .receipt-instructions p {
+        font-size: 8pt !important;
+        line-height: 1.28 !important;
+        margin: 0 0 3pt !important;
+      }
+
+      .receipt-instructions ul {
+        margin: 2pt 0 3pt !important;
+        padding-left: 13pt !important;
+        font-size: 7.9pt !important;
+        line-height: 1.26 !important;
+      }
+
+      .receipt-instructions li {
+        margin-bottom: 1.5pt !important;
+      }
+
+      .receipt-footnote {
+        margin-top: 5pt !important;
+        padding-top: 4pt !important;
+        font-size: 7pt !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a href="#mainContent" class="skip-link no-print">Pular para a inscrição</a>
+
+  <!-- Cabeçalho Institucional (Faixa Branca + Destaque Verde) -->
+  <header class="site-header no-print">
+    <div class="logo-bar">
+      <img src="image_773d3e.png" width="1024" height="183" alt="Prefeitura de Iguaba Grande — Secretaria de Desenvolvimento Econômico, Trabalho e Renda" class="official-logo">
+    </div>
+    <div class="program-strip">
+      <h1 class="program-strip-title" id="headerProcessTitle">Inscrição — Cursos Gratuitos CCP 2027</h1>
+      <p class="program-strip-sub" id="headerProcessSub">Centro de Capacitação Profissional &bull; Inscrição rápida pelo celular ou computador</p>
+    </div>
+  </header>
+
+  <main id="mainContent" class="main-container">
+    <!-- Barra de Progresso do Wizard (aparece apenas durante os 5 passos) -->
+    <div id="progressCard" class="progress-card no-print hidden" aria-live="polite">
+      <div class="progress-top">
+        <span class="progress-step-badge" id="progressStepBadge">Passo 1 de 5</span>
+        <span class="progress-step-name" id="progressStepName">Escolha do Curso</span>
+      </div>
+      <div class="progress-track" role="progressbar" id="progressBarTrack" aria-valuemin="1" aria-valuemax="5" aria-valuenow="1">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+    </div>
+
+    <!-- Carregamento inicial -->
+    <div id="initialLoading" class="loading-box no-print" role="status" aria-live="polite">
+      <span class="spinner spinner-green" aria-hidden="true"></span>
+      <span>Carregando informações do Processo Seletivo...</span>
+    </div>
+
+    <!-- Erro de carregamento -->
+    <div id="loadErrorAlert" class="alert alert-error hidden no-print" role="alert">
+      <div class="alert-title">Não conseguimos carregar as informações agora</div>
+      <div id="loadErrorMessage">Verifique sua internet e toque no botão abaixo para tentar novamente.</div>
+      <div class="alert-actions">
+        <button type="button" id="retryLoadBtn" class="btn btn-secondary btn-sm">Tentar novamente</button>
+      </div>
+    </div>
+
+    <!-- ===================================================================
+         TELA INICIAL: PROCESSO SELETIVO ATUAL + IDENTIFICAÇÃO POR CPF
+         =================================================================== -->
+    <section id="cpfGateSection" class="hidden no-print" aria-label="Identificação do candidato por CPF">
+      <div class="wizard-card">
+        <span id="gateStatusPill" class="processo-status-pill is-open">Inscrições Abertas</span>
+        <h2 class="step-heading" id="gateProcessHeading">Processo Seletivo CCP 2027</h2>
+        <p class="step-subtitle" id="gateProcessDesc">
+          Para começar uma nova inscrição gratuita ou consultar uma inscrição já feita, digite o seu CPF abaixo.
+        </p>
+
+        <div id="gateClosedNotice" class="closed-notice hidden" role="status"></div>
+
+        <div id="gateAlert" class="alert alert-error hidden" role="alert" aria-live="assertive">
+          <div class="alert-title" id="gateAlertTitle">Atenção</div>
+          <div id="gateAlertMessage"></div>
+        </div>
+
+        <form id="cpfGateForm" novalidate>
+          <div class="field">
+            <label for="gateCpfInput">Digite o seu CPF <span class="req-badge" aria-hidden="true">*</span></label>
+            <span class="field-help" id="gateCpfHelp">Só os números; os pontos e o traço aparecem sozinhos.</span>
+            <input type="text" id="gateCpfInput" class="cpf-gate-input" required maxlength="14" inputmode="numeric" autocomplete="off" placeholder="000.000.000-00" aria-required="true" aria-describedby="gateCpfHelp gateCpfFeedback">
+            <span class="field-feedback" id="gateCpfFeedback" aria-live="polite"></span>
+          </div>
+
+          <div class="gate-actions-stack">
+            <button type="submit" id="gateContinueBtn" class="btn btn-finish">
+              <span id="gateSpinner" class="spinner hidden" aria-hidden="true"></span>
+              <span id="gateContinueText">Continuar &rarr;</span>
+            </button>
+          </div>
+        </form>
+
+        <div id="gateClosedNextSteps" class="next-steps-box hidden">
+          <h3 class="next-steps-title">Próximos passos e informações</h3>
+          <p class="next-steps-body" id="gateClosedNextStepsBody"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         PAINEL DO CANDIDATO (QUANDO JÁ EXISTE INSCRIÇÃO PARA O CPF)
+         =================================================================== -->
+    <section id="existingCandidateSection" class="hidden no-print" aria-label="Inscrições encontradas para este CPF">
+      <div class="wizard-card">
+        <span id="existingStatusPill" class="processo-status-pill is-open">Inscrição Encontrada</span>
+        <h2 class="step-heading" id="existingHeading">Encontramos sua inscrição!</h2>
+        <p class="step-subtitle" id="existingSubtitle"></p>
+
+        <div id="existingList" class="existing-list"></div>
+
+        <div class="gate-actions-stack">
+          <button type="button" id="startNewFromExistingBtn" class="btn btn-primary">
+            + Fazer Nova Inscrição
+          </button>
+          <button type="button" id="toggleNextStepsBtn" class="btn btn-secondary" aria-expanded="false" aria-controls="existingNextStepsBox">
+            Informações sobre os Próximos Passos
+          </button>
+          <button type="button" id="changeCpfBtn" class="btn btn-secondary">
+            &larr; Consultar outro CPF
+          </button>
+        </div>
+
+        <div id="existingNextStepsBox" class="next-steps-box hidden" aria-live="polite">
+          <h3 class="next-steps-title">Próximos passos — O que acontece agora?</h3>
+          <p class="next-steps-body" id="existingNextStepsBody"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção do Formulário Passo a Passo -->
+    <section id="formSection" class="hidden" aria-label="Formulário de inscrição passo a passo">
+      <form id="inscricaoForm" novalidate autocomplete="on">
+        <div class="wizard-card">
+          <!-- Alerta de validação amigável do passo atual -->
+          <div id="stepAlert" class="alert alert-error hidden" role="alert" aria-live="assertive">
+            <div class="alert-title" id="stepAlertTitle">Confira antes de continuar</div>
+            <div id="stepAlertMessage"></div>
+          </div>
+
+          <!-- =============================================================
+               PASSO 1 — ESCOLHA DO CURSO
+               ============================================================= -->
+          <div id="wizardStep1" class="wizard-step">
+            <h2 class="step-heading">Qual curso você quer fazer?</h2>
+            <p class="step-subtitle">Toque no curso escolhido. Todos os cursos do CCP são 100% gratuitos.</p>
+
+            <div id="cursosCardsList" class="choice-list" role="radiogroup" aria-label="Lista de cursos disponíveis"></div>
+
+            <div class="wizard-nav">
+              <button type="button" id="backToGateBtn" class="btn btn-secondary">&larr; Voltar ao Início</button>
+              <button type="button" id="nextFromStep1Btn" class="btn btn-primary">Continuar &rarr;</button>
+            </div>
+          </div>
+
+          <!-- =============================================================
+               PASSO 2 — ESCOLHA DA TURMA E HORÁRIO
+               ============================================================= -->
+          <div id="wizardStep2" class="wizard-step hidden">
+            <h2 class="step-heading">Em qual dia e horário você pode estudar?</h2>
+            <p class="step-subtitle">Escolha a turma que melhor combina com a sua rotina.</p>
+
+            <div class="chosen-chip">
+              <span>Curso escolhido:</span>
+              <span id="step2CursoName"></span>
+            </div>
+
+            <div id="turmasCardsList" class="choice-list" role="radiogroup" aria-label="Turmas disponíveis"></div>
+
+            <div class="wizard-nav">
+              <button type="button" id="backToStep1Btn" class="btn btn-secondary">&larr; Voltar</button>
+              <button type="button" id="nextFromStep2Btn" class="btn btn-primary">Continuar &rarr;</button>
+            </div>
+          </div>
+
+          <!-- =============================================================
+               PASSO 3 — SEUS DADOS BÁSICOS
+               ============================================================= -->
+          <div id="wizardStep3" class="wizard-step hidden">
+            <h2 class="step-heading">Quem vai fazer o curso?</h2>
+            <p class="step-subtitle">Preencha com calma os dados da pessoa que vai estudar.</p>
+
+            <div class="fields-stack">
+              <div class="field">
+                <label for="cpfInput">CPF <span class="req-badge" aria-hidden="true">*</span></label>
+                <span class="field-help" id="cpfHelp">Só os números; os pontos aparecem sozinhos.</span>
+                <input type="text" id="cpfInput" name="cpf" required maxlength="14" inputmode="numeric" autocomplete="off" placeholder="000.000.000-00" aria-required="true" aria-describedby="cpfHelp cpfFeedback">
+                <span class="field-feedback" id="cpfFeedback" aria-live="polite"></span>
+              </div>
+
+              <div class="field">
+                <label for="dataNascimentoInput">Data de nascimento <span class="req-badge" aria-hidden="true">*</span></label>
+                <span class="field-help" id="dataNascHelp">Informe o dia, mês e ano em que você nasceu. Se já tiver inscrição anterior, seus dados serão preenchidos automaticamente com segurança.</span>
+                <input type="date" id="dataNascimentoInput" name="data_nascimento" required min="1900-01-01" autocomplete="bday" aria-required="true" aria-describedby="dataNascHelp dataNascimentoFeedback">
+                <span class="field-feedback" id="dataNascimentoFeedback" aria-live="polite"></span>
+              </div>
+
+              <div id="autofillStatusBox" class="chosen-chip hidden" role="status" aria-live="polite"></div>
+
+              <div class="field">
+                <label for="nomeInput">Nome completo <span class="req-badge" aria-hidden="true">*</span></label>
+                <span class="field-help" id="nomeHelp">Digite seu nome igual está no RG.</span>
+                <input type="text" id="nomeInput" name="nome" required maxlength="150" autocomplete="name" placeholder="Ex.: Maria da Silva Santos" aria-required="true" aria-describedby="nomeHelp nomeFeedback">
+                <span class="field-feedback" id="nomeFeedback" aria-live="polite"></span>
+              </div>
+
+              <div class="field">
+                <label for="telefoneInput">Telefone / WhatsApp <span class="req-badge" aria-hidden="true">*</span></label>
+                <span class="field-help" id="telefoneHelp">Número onde podemos mandar mensagem se você passar.</span>
+                <input type="tel" id="telefoneInput" name="telefone" required maxlength="15" inputmode="numeric" autocomplete="tel" placeholder="(22) 99999-9999" aria-required="true" aria-describedby="telefoneHelp telefoneFeedback">
+                <span class="field-feedback" id="telefoneFeedback" aria-live="polite"></span>
+              </div>
+
+              <div class="optional-group">
+                <p class="optional-group-title">Campos opcionais — se preferir, pode deixar em branco:</p>
+
+                <div class="field">
+                  <span class="field-group-label" id="sexoGroupLabel">Sexo <span class="opt-pill">Opcional</span></span>
+                  <div class="toggle-btn-group toggle-btn-group-3" role="group" aria-labelledby="sexoGroupLabel" id="sexoBtnGroup">
+                    <button type="button" class="toggle-choice-btn" data-sexo="Feminino" aria-pressed="false">Feminino</button>
+                    <button type="button" class="toggle-choice-btn" data-sexo="Masculino" aria-pressed="false">Masculino</button>
+                    <button type="button" class="toggle-choice-btn" data-sexo="Outro" aria-pressed="false">Outro</button>
+                  </div>
+                </div>
+
+                <div class="field">
+                  <label for="emailInput">E-mail <span class="opt-pill">Opcional</span></label>
+                  <span class="field-help" id="emailHelp">Se não tiver e-mail, pode deixar em branco.</span>
+                  <input type="email" id="emailInput" name="email" maxlength="150" autocomplete="email" placeholder="seuemail@exemplo.com" aria-describedby="emailHelp emailFeedback">
+                  <span class="field-feedback" id="emailFeedback" aria-live="polite"></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="wizard-nav">
+              <button type="button" id="backToStep2Btn" class="btn btn-secondary">&larr; Voltar</button>
+              <button type="button" id="nextFromStep3Btn" class="btn btn-primary">Continuar &rarr;</button>
+            </div>
+          </div>
+
+          <!-- =============================================================
+               PASSO 4 — ONDE VOCÊ MORA E ESCOLARIDADE
+               ============================================================= -->
+          <div id="wizardStep4" class="wizard-step hidden">
+            <h2 class="step-heading">Onde você mora e escolaridade</h2>
+            <p class="step-subtitle">Informe seu bairro, endereço e até que série você estudou.</p>
+
+            <div class="fields-stack">
+              <div class="field">
+                <label for="cepInput">CEP <span class="opt-pill">Opcional</span></label>
+                <span class="field-help" id="cepHelp">Se souber o CEP, digitando aqui o endereço preenche sozinho.</span>
+                <input type="text" id="cepInput" name="cep" maxlength="10" inputmode="numeric" autocomplete="postal-code" placeholder="28.960-000" aria-describedby="cepHelp cepFeedback">
+                <span class="field-feedback" id="cepFeedback" aria-live="polite"></span>
+              </div>
+
+              <div class="field">
+                <label for="cidadeInput">Cidade</label>
+                <input type="text" id="cidadeInput" name="cidade" maxlength="100" value="Iguaba Grande" autocomplete="address-level2">
+              </div>
+
+              <div class="field">
+                <label for="bairroSelect">Bairro</label>
+                <span class="field-help">Escolha o seu bairro na lista abaixo.</span>
+                <select id="bairroSelect" name="bairro">
+                  <option value="">Toque para escolher seu bairro...</option>
+                  <option value="Balneário dos Signos">Balneário dos Signos</option>
+                  <option value="Canellas City">Canellas City</option>
+                  <option value="Centro">Centro</option>
+                  <option value="Cidade Nova">Cidade Nova</option>
+                  <option value="Coqueiros">Coqueiros</option>
+                  <option value="Estação">Estação</option>
+                  <option value="Igarapiapunha">Igarapiapunha</option>
+                  <option value="Iguaba Pequena">Iguaba Pequena</option>
+                  <option value="Jardim Solares">Jardim Solares</option>
+                  <option value="Lagoinha">Lagoinha</option>
+                  <option value="Laguna Azul">Laguna Azul</option>
+                  <option value="Nova Iguaba">Nova Iguaba</option>
+                  <option value="Parque dos Desejos">Parque dos Desejos</option>
+                  <option value="Parque Tamariz">Parque Tamariz</option>
+                  <option value="Pedreira">Pedreira</option>
+                  <option value="Sapeatiba Mirim">Sapeatiba Mirim</option>
+                  <option value="São Miguel">São Miguel</option>
+                  <option value="Ubás">Ubás</option>
+                  <option value="União">União</option>
+                  <option value="Vila dos Coqueiros">Vila dos Coqueiros</option>
+                  <option value="Vila Nova">Vila Nova</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="logradouroInput">Endereço (Rua / Avenida)</label>
+                <input type="text" id="logradouroInput" name="logradouro" maxlength="200" autocomplete="street-address" placeholder="Ex.: Rua das Flores">
+              </div>
+
+              <div class="field">
+                <label for="escolaridadeSelect">Até que série você estudou?</label>
+                <select id="escolaridadeSelect" name="escolaridade">
+                  <option value="">Toque para escolher...</option>
+                  <option value="Ensino Fundamental Incompleto">Ensino Fundamental Incompleto</option>
+                  <option value="Ensino Fundamental Completo">Ensino Fundamental Completo</option>
+                  <option value="Ensino Médio Incompleto">Ensino Médio Incompleto</option>
+                  <option value="Ensino Médio Completo">Ensino Médio Completo</option>
+                  <option value="Ensino Superior Incompleto">Ensino Superior Incompleto</option>
+                  <option value="Ensino Superior Completo">Ensino Superior Completo</option>
+                </select>
+              </div>
+
+              <div class="optional-group">
+                <p class="optional-group-title">Campo opcional — pode pular se não souber:</p>
+
+                <div class="field">
+                  <label for="referenciaInput">Ponto de referência <span class="opt-pill">Opcional</span></label>
+                  <span class="field-help">Ex.: perto da praça, padaria, mercado ou escola.</span>
+                  <input type="text" id="referenciaInput" name="referencia" maxlength="150" placeholder="Opcional">
+                </div>
+              </div>
+            </div>
+
+            <div class="wizard-nav">
+              <button type="button" id="backToStep3Btn" class="btn btn-secondary">&larr; Voltar</button>
+              <button type="button" id="nextFromStep4Btn" class="btn btn-primary">Continuar &rarr;</button>
+            </div>
+          </div>
+
+          <!-- =============================================================
+               PASSO 5 — SAÚDE, CADÚNICO E CONFIRMAÇÃO
+               ============================================================= -->
+          <div id="wizardStep5" class="wizard-step hidden">
+            <h2 class="step-heading">Saúde, CadÚnico e confirmação</h2>
+            <p class="step-subtitle">Último passo! Responda rapidinho e finalize sua inscrição.</p>
+
+            <!-- Resumo rápido para tranquilizar o candidato -->
+            <div class="summary-box" aria-live="polite">
+              <div class="summary-box-title">Confira sua escolha</div>
+              <div class="summary-line">Curso: <span id="summaryCurso"></span></div>
+              <div class="summary-line">Horário: <span id="summaryTurma"></span></div>
+              <div class="summary-line">Nome: <span id="summaryNome"></span></div>
+            </div>
+
+            <div class="fields-stack">
+              <div class="field">
+                <span class="field-group-label" id="cadunicoGroupLabel">Você tem CadÚnico / NIS?</span>
+                <div class="toggle-btn-group" role="group" aria-labelledby="cadunicoGroupLabel" id="cadunicoBtnGroup">
+                  <button type="button" class="toggle-choice-btn is-active" data-val="Não" aria-pressed="true">Não</button>
+                  <button type="button" class="toggle-choice-btn" data-val="Sim" aria-pressed="false">Sim</button>
+                </div>
+                <div id="cadunicoDetalheWrap" class="conditional-detail hidden">
+                  <input type="text" id="cadunicoDetalheInput" maxlength="40" placeholder="Número do NIS (opcional — pode deixar vazio)" aria-label="Número do NIS">
+                </div>
+              </div>
+
+              <div class="field">
+                <span class="field-group-label" id="alergiaGroupLabel">Você tem alguma alergia?</span>
+                <div class="toggle-btn-group" role="group" aria-labelledby="alergiaGroupLabel" id="alergiaBtnGroup">
+                  <button type="button" class="toggle-choice-btn is-active" data-val="Não" aria-pressed="true">Não</button>
+                  <button type="button" class="toggle-choice-btn" data-val="Sim" aria-pressed="false">Sim</button>
+                </div>
+                <div id="alergiaDetalheWrap" class="conditional-detail hidden">
+                  <input type="text" id="alergiaDetalheInput" maxlength="150" placeholder="Qual alergia? (opcional)" aria-label="Qual alergia">
+                </div>
+              </div>
+
+              <div class="field">
+                <span class="field-group-label" id="medicamentoGroupLabel">Faz uso de algum medicamento contínuo?</span>
+                <div class="toggle-btn-group" role="group" aria-labelledby="medicamentoGroupLabel" id="medicamentoBtnGroup">
+                  <button type="button" class="toggle-choice-btn is-active" data-val="Não" aria-pressed="true">Não</button>
+                  <button type="button" class="toggle-choice-btn" data-val="Sim" aria-pressed="false">Sim</button>
+                </div>
+                <div id="medicamentoDetalheWrap" class="conditional-detail hidden">
+                  <input type="text" id="medicamentoDetalheInput" maxlength="150" placeholder="Qual medicamento? (opcional)" aria-label="Qual medicamento">
+                </div>
+              </div>
+
+              <div class="optional-group">
+                <div class="field">
+                  <label for="tipoSanguineoSelect">Tipo Sanguíneo <span class="opt-pill">Opcional</span></label>
+                  <span class="field-help">Se você não souber, deixe em "Não Informado".</span>
+                  <select id="tipoSanguineoSelect" name="tipo_sanguineo">
+                    <option value="Não Informado" selected>Não Informado</option>
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="B+">B+</option>
+                    <option value="B-">B-</option>
+                    <option value="AB+">AB+</option>
+                    <option value="AB-">AB-</option>
+                    <option value="O+">O+</option>
+                    <option value="O-">O-</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Aceite LGPD destacado -->
+              <div class="field">
+                <label class="lgpd-card" id="lgpdBox" for="lgpdCheckbox">
+                  <input type="checkbox" id="lgpdCheckbox" name="lgpd_aceite" required aria-required="true" aria-describedby="lgpdFeedback">
+                  <span class="lgpd-text">
+                    Eu concordo com o uso dos meus dados para esta inscrição, conforme o
+                    <button type="button" id="openLgpdModalBtn" class="link-btn">Aviso de Privacidade (LGPD — Lei nº 13.709/2018)</button>
+                    da Prefeitura de Iguaba Grande / SDETR. <span class="req-badge" aria-hidden="true">*</span>
+                  </span>
+                </label>
+                <span class="field-feedback" id="lgpdFeedback" aria-live="polite"></span>
+              </div>
+            </div>
+
+            <div class="wizard-nav">
+              <button type="button" id="backToStep4Btn" class="btn btn-secondary">&larr; Voltar</button>
+              <button type="submit" id="submitBtn" class="btn btn-finish">
+                <span id="submitBtnSpinner" class="spinner hidden" aria-hidden="true"></span>
+                <span id="submitBtnText">FINALIZAR MINHA INSCRIÇÃO</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </section>
+
+    <!-- ===================================================================
+         COMPROVANTE DE INSCRIÇÃO (IMPRIMÍVEL EM 1 PÁGINA A4 COM LOGO)
+         =================================================================== -->
+    <section id="receiptSection" class="hidden" aria-label="Comprovante de inscrição">
+      <article class="receipt-card">
+        <div class="receipt-header-white">
+          <img src="image_773d3e.png" width="1024" height="183" alt="Prefeitura de Iguaba Grande — Secretaria de Desenvolvimento Econômico, Trabalho e Renda" class="receipt-logo">
+          <h2 class="receipt-title" id="receiptTitle">Comprovante de Inscrição — Processo Seletivo CCP 2027</h2>
+          <p class="receipt-subtitle">Centro de Capacitação Profissional (CCP) &bull; SDETR</p>
+        </div>
+
+        <div class="receipt-body">
+          <div class="receipt-status">
+            <span>&#10003;</span>
+            <span>Inscrição / Pré-Matrícula Registrada com Sucesso</span>
+          </div>
+
+          <div class="protocol-box">
+            <div class="protocol-label">Número de Protocolo</div>
+            <div class="protocol-value" id="receiptProtocolo"></div>
+            <div class="protocol-copy-wrap no-print">
+              <button type="button" id="copyProtocolBtn" class="btn btn-secondary btn-sm">Copiar número de protocolo</button>
+            </div>
+          </div>
+
+          <div class="receipt-grid">
+            <div class="receipt-item">
+              <div class="receipt-item-label">Candidato(a)</div>
+              <div class="receipt-item-value" id="receiptNome"></div>
+            </div>
+            <div class="receipt-item">
+              <div class="receipt-item-label">CPF</div>
+              <div class="receipt-item-value" id="receiptCpf"></div>
+            </div>
+            <div class="receipt-item">
+              <div class="receipt-item-label">Curso</div>
+              <div class="receipt-item-value" id="receiptCurso"></div>
+            </div>
+            <div class="receipt-item">
+              <div class="receipt-item-label">Turma</div>
+              <div class="receipt-item-value" id="receiptTurma"></div>
+            </div>
+            <div class="receipt-item">
+              <div class="receipt-item-label">Turno</div>
+              <div class="receipt-item-value" id="receiptTurno"></div>
+            </div>
+            <div class="receipt-item">
+              <div class="receipt-item-label">Dias da Semana</div>
+              <div class="receipt-item-value" id="receiptDias"></div>
+            </div>
+            <div class="receipt-item">
+              <div class="receipt-item-label">Período Previsto</div>
+              <div class="receipt-item-value" id="receiptPeriodo"></div>
+            </div>
+            <div class="receipt-item">
+              <div class="receipt-item-label">Data e Hora do Registro</div>
+              <div class="receipt-item-value" id="receiptDataHora"></div>
+            </div>
+          </div>
+
+          <div class="receipt-instructions">
+            <h3>Orientações Importantes — Comparecimento Presencial na Sede do CCP</h3>
+            <p>
+              Guarde este comprovante e o seu número de protocolo. A efetivação da matrícula está sujeita à
+              classificação conforme os critérios do Edital do Processo Seletivo CCP 2027 e à conferência presencial
+              da documentação na sede do <strong>Centro de Capacitação Profissional (CCP / SDETR)</strong>.
+            </p>
+            <p><strong>Documentos obrigatórios para apresentar no comparecimento presencial:</strong></p>
+            <ul>
+              <li>Documento oficial de identificação com foto (RG ou CNH) e CPF (originais e cópias);</li>
+              <li>Comprovante de residência atualizado em Iguaba Grande (em nome próprio ou declaração conforme edital);</li>
+              <li>Comprovante de escolaridade compatível com o curso escolhido;</li>
+              <li>Comprovante de CadÚnico/NIS, caso tenha informado inscrição no programa;</li>
+              <li>Este comprovante impresso ou o número de protocolo anotado.</li>
+            </ul>
+            <p>
+              Acompanhe as convocações nos canais oficiais da Prefeitura de Iguaba Grande e mantenha seu telefone/WhatsApp ativo.
+            </p>
+          </div>
+
+          <div class="receipt-actions no-print">
+            <button type="button" id="printReceiptBtn" class="btn btn-primary">
+              Imprimir / Salvar Comprovante (PDF)
+            </button>
+            <button type="button" id="backToExistingFromReceiptBtn" class="btn btn-secondary hidden">
+              &larr; Voltar às Minhas Inscrições
+            </button>
+            <button type="button" id="newRegistrationBtn" class="btn btn-secondary">
+              Fazer Nova Inscrição
+            </button>
+          </div>
+
+          <div class="receipt-footnote">
+            Documento eletrônico gerado pelo Sistema de Inscrições do Centro de Capacitação Profissional (CCP) &bull; SDETR &bull; Prefeitura Municipal de Iguaba Grande / RJ.
+          </div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <!-- Barra Fixa Inferior no Celular (Passos 1 e 2) -->
+  <div id="mobileStickyBar" class="mobile-sticky-bar hidden no-print" aria-live="polite">
+    <div class="mobile-sticky-label" id="mobileStickyLabel"></div>
+    <button type="button" id="mobileStickyContinueBtn" class="btn btn-primary">Continuar &rarr;</button>
+  </div>
+
+  <footer class="site-footer no-print">
+    <p><strong>Prefeitura Municipal de Iguaba Grande / RJ</strong> &mdash; Secretaria de Desenvolvimento Econômico, Trabalho e Renda (SDETR)</p>
+    <p>Centro de Capacitação Profissional (CCP) &bull; Processo Seletivo 2027 &bull; Protegido pela LGPD (Lei nº 13.709/2018)</p>
+  </footer>
+
+  <!-- Modal Aviso de Privacidade (LGPD) -->
+  <div id="lgpdModal" class="modal-backdrop hidden" role="dialog" aria-modal="true" aria-labelledby="lgpdModalTitle">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h2 id="lgpdModalTitle">Aviso de Privacidade e Proteção de Dados (LGPD)</h2>
+        <button type="button" id="closeLgpdModalX" class="modal-close" aria-label="Fechar aviso de privacidade">&times;</button>
+      </div>
+      <div class="modal-body">
+        <h3>1. Quem cuida dos seus dados (Controlador)</h3>
+        <p>
+          Os dados informados neste formulário são cuidados pela <strong>Prefeitura Municipal de Iguaba Grande / RJ</strong>,
+          por meio da <strong>Secretaria de Desenvolvimento Econômico, Trabalho e Renda (SDETR)</strong> e do
+          <strong>Centro de Capacitação Profissional (CCP)</strong>.
+        </p>
+
+        <h3>2. Para que seus dados são usados (Finalidade)</h3>
+        <p>
+          Conforme a Lei Geral de Proteção de Dados (<strong>Lei nº 13.709/2018</strong>, arts. 7º, III e V, e art. 23),
+          seus dados servem exclusivamente para:
+        </p>
+        <ul>
+          <li>Realizar sua inscrição e seleção para as vagas gratuitas do Processo Seletivo 2027 do CCP/SDETR;</li>
+          <li>Entrar em contato com você por telefone ou WhatsApp caso seja convocado(a) para matrícula;</li>
+          <li>Cuidar da sua segurança durante as aulas presenciais (informações de tipo sanguíneo, alergias e medicamentos);</li>
+          <li>Cumprir obrigações legais da Administração Pública e gerar estatísticas sem identificar pessoas.</li>
+        </ul>
+
+        <h3>3. Segurança e Sigilo</h3>
+        <p>
+          Seus dados são enviados de forma protegida e ficam guardados com acesso restrito apenas à equipe autorizada do
+          CCP/SDETR. Suas informações <strong>nunca são vendidas</strong> nem repassadas a empresas comerciais.
+        </p>
+
+        <h3>4. Seus Direitos (Art. 18 da LGPD)</h3>
+        <p>Você pode solicitar à Prefeitura de Iguaba Grande, a qualquer momento:</p>
+        <ul>
+          <li>Confirmação e acesso aos dados que você enviou;</li>
+          <li>Correção de dados incompletos, incorretos ou desatualizados;</li>
+          <li>Informações sobre como seus dados são tratados;</li>
+          <li>Cancelamento do consentimento, quando aplicável (lembrando que os dados obrigatórios são necessários para manter sua inscrição).</li>
+        </ul>
+        <p>
+          Para exercer seus direitos, procure presencialmente a sede do CCP / SDETR ou a Ouvidoria / Encarregado de Dados (DPO)
+          da Prefeitura Municipal de Iguaba Grande / RJ.
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" id="closeLgpdModalBtn" class="btn btn-secondary btn-sm">Fechar</button>
+        <button type="button" id="acceptLgpdModalBtn" class="btn btn-primary btn-sm">Li e Concordo</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Supabase JS v2 via CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+  <script>
+    'use strict';
+
+    (function () {
+      /* =====================================================================
+         1. CONFIGURAÇÃO SUPABASE (APENAS CHAVE ANON PÚBLICA — INTACTA)
+         ===================================================================== */
+      const SUPABASE_URL = 'https://gcpfsqanznlmfqhdemic.supabase.co';
+      const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdjcGZzcWFuem5sbWZxaGRlbWljIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTU1MTIxMjcsImV4cCI6MjExMTA4ODEyN30.rw2XYeIL8j_3awchwHuQkRP1nABnlsorNyrdJ7TC0_w';
+
+      const STEP_TITLES = [
+        'Escolha do Curso',
+        'Dia e Horário',
+        'Seus Dados Básicos',
+        'Endereço e Escolaridade',
+        'Saúde e Confirmação'
+      ];
+
+      let supabaseClient = null;
+
+      /* =====================================================================
+         2. ESTADO DA APLICAÇÃO
+         ===================================================================== */
+      const DEFAULT_PROXIMOS_PASSOS =
+        '1. Aguarde a divulgação da lista de classificados nos canais oficiais da Prefeitura de Iguaba Grande.\n' +
+        '2. Mantenha seu telefone/WhatsApp ativo: a equipe do CCP entrará em contato caso você seja convocado(a).\n' +
+        '3. No dia da matrícula presencial na sede do CCP/SDETR, leve RG, CPF, comprovante de residência em Iguaba Grande, comprovante de escolaridade, CadÚnico/NIS (se informado) e o seu comprovante com o número de protocolo.';
+
+      const DEFAULT_MSG_ENCERRADO =
+        'As inscrições para este processo seletivo estão encerradas no momento. Você ainda pode digitar seu CPF abaixo para reimprimir seu comprovante ou ver os próximos passos.';
+
+      const state = {
+        currentStep: 1,
+        processoAtual: null,
+        processoAberto: true,
+        processosTableReady: false,
+        cpfConsultado: '',
+        autofilledKey: '',
+        existingInscricoes: [],
+        receiptFromExisting: false,
+        cursos: [],
+        turmas: [],
+        selectedCursoNome: '',
+        selectedTurmaId: '',
+        sexo: '',
+        cadunicoChoice: 'Não',
+        alergiaChoice: 'Não',
+        medicamentoChoice: 'Não',
+        isLoading: false,
+        isCheckingCpf: false,
+        isSubmitting: false,
+        cepAbortController: null,
+        lastFocusedBeforeModal: null
+      };
+
+      /* =====================================================================
+         3. REFERÊNCIAS DO DOM
+         ===================================================================== */
+      const els = {
+        headerProcessTitle: document.getElementById('headerProcessTitle'),
+        headerProcessSub: document.getElementById('headerProcessSub'),
+
+        progressCard: document.getElementById('progressCard'),
+        progressStepBadge: document.getElementById('progressStepBadge'),
+        progressStepName: document.getElementById('progressStepName'),
+        progressBarTrack: document.getElementById('progressBarTrack'),
+        progressFill: document.getElementById('progressFill'),
+
+        initialLoading: document.getElementById('initialLoading'),
+        loadErrorAlert: document.getElementById('loadErrorAlert'),
+        loadErrorMessage: document.getElementById('loadErrorMessage'),
+        retryLoadBtn: document.getElementById('retryLoadBtn'),
+
+        cpfGateSection: document.getElementById('cpfGateSection'),
+        gateStatusPill: document.getElementById('gateStatusPill'),
+        gateProcessHeading: document.getElementById('gateProcessHeading'),
+        gateProcessDesc: document.getElementById('gateProcessDesc'),
+        gateClosedNotice: document.getElementById('gateClosedNotice'),
+        gateAlert: document.getElementById('gateAlert'),
+        gateAlertTitle: document.getElementById('gateAlertTitle'),
+        gateAlertMessage: document.getElementById('gateAlertMessage'),
+        cpfGateForm: document.getElementById('cpfGateForm'),
+        gateCpfInput: document.getElementById('gateCpfInput'),
+        gateCpfFeedback: document.getElementById('gateCpfFeedback'),
+        gateContinueBtn: document.getElementById('gateContinueBtn'),
+        gateSpinner: document.getElementById('gateSpinner'),
+        gateContinueText: document.getElementById('gateContinueText'),
+        gateClosedNextSteps: document.getElementById('gateClosedNextSteps'),
+        gateClosedNextStepsBody: document.getElementById('gateClosedNextStepsBody'),
+
+        existingCandidateSection: document.getElementById('existingCandidateSection'),
+        existingStatusPill: document.getElementById('existingStatusPill'),
+        existingHeading: document.getElementById('existingHeading'),
+        existingSubtitle: document.getElementById('existingSubtitle'),
+        existingList: document.getElementById('existingList'),
+        startNewFromExistingBtn: document.getElementById('startNewFromExistingBtn'),
+        toggleNextStepsBtn: document.getElementById('toggleNextStepsBtn'),
+        changeCpfBtn: document.getElementById('changeCpfBtn'),
+        existingNextStepsBox: document.getElementById('existingNextStepsBox'),
+        existingNextStepsBody: document.getElementById('existingNextStepsBody'),
+
+        formSection: document.getElementById('formSection'),
+        form: document.getElementById('inscricaoForm'),
+        stepAlert: document.getElementById('stepAlert'),
+        stepAlertTitle: document.getElementById('stepAlertTitle'),
+        stepAlertMessage: document.getElementById('stepAlertMessage'),
+
+        stepEls: [
+          document.getElementById('wizardStep1'),
+          document.getElementById('wizardStep2'),
+          document.getElementById('wizardStep3'),
+          document.getElementById('wizardStep4'),
+          document.getElementById('wizardStep5')
+        ],
+
+        cursosCardsList: document.getElementById('cursosCardsList'),
+        backToGateBtn: document.getElementById('backToGateBtn'),
+        nextFromStep1Btn: document.getElementById('nextFromStep1Btn'),
+
+        step2CursoName: document.getElementById('step2CursoName'),
+        turmasCardsList: document.getElementById('turmasCardsList'),
+        backToStep1Btn: document.getElementById('backToStep1Btn'),
+        nextFromStep2Btn: document.getElementById('nextFromStep2Btn'),
+
+        nomeInput: document.getElementById('nomeInput'),
+        nomeFeedback: document.getElementById('nomeFeedback'),
+        cpfInput: document.getElementById('cpfInput'),
+        cpfFeedback: document.getElementById('cpfFeedback'),
+        dataNascimentoInput: document.getElementById('dataNascimentoInput'),
+        dataNascimentoFeedback: document.getElementById('dataNascimentoFeedback'),
+        autofillStatusBox: document.getElementById('autofillStatusBox'),
+        sexoBtnGroup: document.getElementById('sexoBtnGroup'),
+        telefoneInput: document.getElementById('telefoneInput'),
+        telefoneFeedback: document.getElementById('telefoneFeedback'),
+        emailInput: document.getElementById('emailInput'),
+        emailFeedback: document.getElementById('emailFeedback'),
+        backToStep2Btn: document.getElementById('backToStep2Btn'),
+        nextFromStep3Btn: document.getElementById('nextFromStep3Btn'),
+
+        cepInput: document.getElementById('cepInput'),
+        cepFeedback: document.getElementById('cepFeedback'),
+        cidadeInput: document.getElementById('cidadeInput'),
+        bairroSelect: document.getElementById('bairroSelect'),
+        logradouroInput: document.getElementById('logradouroInput'),
+        referenciaInput: document.getElementById('referenciaInput'),
+        escolaridadeSelect: document.getElementById('escolaridadeSelect'),
+        backToStep3Btn: document.getElementById('backToStep3Btn'),
+        nextFromStep4Btn: document.getElementById('nextFromStep4Btn'),
+
+        summaryCurso: document.getElementById('summaryCurso'),
+        summaryTurma: document.getElementById('summaryTurma'),
+        summaryNome: document.getElementById('summaryNome'),
+        tipoSanguineoSelect: document.getElementById('tipoSanguineoSelect'),
+        cadunicoBtnGroup: document.getElementById('cadunicoBtnGroup'),
+        cadunicoDetalheWrap: document.getElementById('cadunicoDetalheWrap'),
+        cadunicoDetalheInput: document.getElementById('cadunicoDetalheInput'),
+        alergiaBtnGroup: document.getElementById('alergiaBtnGroup'),
+        alergiaDetalheWrap: document.getElementById('alergiaDetalheWrap'),
+        alergiaDetalheInput: document.getElementById('alergiaDetalheInput'),
+        medicamentoBtnGroup: document.getElementById('medicamentoBtnGroup'),
+        medicamentoDetalheWrap: document.getElementById('medicamentoDetalheWrap'),
+        medicamentoDetalheInput: document.getElementById('medicamentoDetalheInput'),
+
+        lgpdBox: document.getElementById('lgpdBox'),
+        lgpdCheckbox: document.getElementById('lgpdCheckbox'),
+        lgpdFeedback: document.getElementById('lgpdFeedback'),
+        openLgpdModalBtn: document.getElementById('openLgpdModalBtn'),
+        lgpdModal: document.getElementById('lgpdModal'),
+        closeLgpdModalX: document.getElementById('closeLgpdModalX'),
+        closeLgpdModalBtn: document.getElementById('closeLgpdModalBtn'),
+        acceptLgpdModalBtn: document.getElementById('acceptLgpdModalBtn'),
+
+        backToStep4Btn: document.getElementById('backToStep4Btn'),
+        submitBtn: document.getElementById('submitBtn'),
+        submitBtnSpinner: document.getElementById('submitBtnSpinner'),
+        submitBtnText: document.getElementById('submitBtnText'),
+
+        receiptSection: document.getElementById('receiptSection'),
+        receiptTitle: document.getElementById('receiptTitle'),
+        receiptProtocolo: document.getElementById('receiptProtocolo'),
+        copyProtocolBtn: document.getElementById('copyProtocolBtn'),
+        receiptNome: document.getElementById('receiptNome'),
+        receiptCpf: document.getElementById('receiptCpf'),
+        receiptCurso: document.getElementById('receiptCurso'),
+        receiptTurma: document.getElementById('receiptTurma'),
+        receiptTurno: document.getElementById('receiptTurno'),
+        receiptDias: document.getElementById('receiptDias'),
+        receiptPeriodo: document.getElementById('receiptPeriodo'),
+        receiptDataHora: document.getElementById('receiptDataHora'),
+        printReceiptBtn: document.getElementById('printReceiptBtn'),
+        backToExistingFromReceiptBtn: document.getElementById('backToExistingFromReceiptBtn'),
+        newRegistrationBtn: document.getElementById('newRegistrationBtn'),
+
+        mobileStickyBar: document.getElementById('mobileStickyBar'),
+        mobileStickyLabel: document.getElementById('mobileStickyLabel'),
+        mobileStickyContinueBtn: document.getElementById('mobileStickyContinueBtn')
+      };
+
+      /* =====================================================================
+         4. UTILITÁRIOS SEGUROS (SOMENTE textContent / DOM API)
+         ===================================================================== */
+      function onlyDigits(value) {
+        return String(value || '').replace(/\D/g, '');
+      }
+
+      function normalizeText(value) {
+        return String(value || '')
+          .normalize('NFD')
+          .replace(/[\u0300-\u036f]/g, '')
+          .trim()
+          .toLowerCase();
+      }
+
+      function setFeedback(el, message, type) {
+        el.textContent = message || '';
+        el.classList.remove('is-valid', 'is-error', 'is-info');
+        if (type === 'valid') el.classList.add('is-valid');
+        if (type === 'error') el.classList.add('is-error');
+        if (type === 'info') el.classList.add('is-info');
+      }
+
+      function setInputValidationState(inputEl, isValidState) {
+        inputEl.classList.remove('is-valid', 'is-invalid');
+        if (isValidState === true) {
+          inputEl.classList.add('is-valid');
+          inputEl.setAttribute('aria-invalid', 'false');
+        } else if (isValidState === false) {
+          inputEl.classList.add('is-invalid');
+          inputEl.setAttribute('aria-invalid', 'true');
+        } else {
+          inputEl.removeAttribute('aria-invalid');
+        }
+      }
+
+      function showStepAlert(title, message) {
+        els.stepAlertTitle.textContent = title || 'Confira antes de continuar';
+        els.stepAlertMessage.textContent = message || '';
+        els.stepAlert.classList.remove('hidden');
+        els.stepAlert.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+
+      function hideStepAlert() {
+        els.stepAlert.classList.add('hidden');
+        els.stepAlertMessage.textContent = '';
+      }
+
+      function formatDateBR(dateStr) {
+        if (!dateStr) return 'A definir';
+        const match = /^(\d{4})-(\d{2})-(\d{2})/.exec(String(dateStr));
+        if (!match) return String(dateStr);
+        return match[3] + '/' + match[2] + '/' + match[1];
+      }
+
+      function formatPeriodo(inicio, fim) {
+        if (!inicio && !fim) return 'A definir';
+        if (inicio && fim) return formatDateBR(inicio) + ' a ' + formatDateBR(fim);
+        if (inicio) return 'Início em ' + formatDateBR(inicio);
+        return 'Até ' + formatDateBR(fim);
+      }
+
+      function formatCargaHoraria(carga) {
+        if (carga === null || carga === undefined || String(carga).trim() === '') {
+          return 'Carga horária conforme edital';
+        }
+        const raw = String(carga).trim();
+        if (/^\d+$/.test(raw)) {
+          return raw + ' horas';
+        }
+        return raw;
+      }
+
+      function extractTurmaShortName(identificador, turno, diaSemana) {
+        const raw = String(identificador || '').trim();
+        if (!raw) return '';
+        if (turno && diaSemana) {
+          const suffix = ' (' + String(turno).trim() + ' - ' + String(diaSemana).trim() + ')';
+          if (raw.toLowerCase().endsWith(suffix.toLowerCase())) {
+            return raw.slice(0, -suffix.length).trim();
+          }
+        }
+        return raw.replace(/\s*\([^)]*\)\s*$/, '').trim();
+      }
+
+      function formatDateTimeBR(isoOrDate) {
+        const dt = isoOrDate ? new Date(isoOrDate) : new Date();
+        if (Number.isNaN(dt.getTime())) {
+          return new Date().toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' });
+        }
+        try {
+          return dt.toLocaleString('pt-BR', {
+            timeZone: 'America/Sao_Paulo',
+            day: '2-digit',
+            month: '2-digit',
+            year: 'numeric',
+            hour: '2-digit',
+            minute: '2-digit',
+            second: '2-digit'
+          });
+        } catch (_err) {
+          return dt.toLocaleString('pt-BR');
+        }
+      }
+
+      function getTodayISO() {
+        const now = new Date();
+        const year = now.getFullYear();
+        const month = String(now.getMonth() + 1).padStart(2, '0');
+        const day = String(now.getDate()).padStart(2, '0');
+        return year + '-' + month + '-' + day;
+      }
+
+      /* =====================================================================
+         5. MÁSCARAS E VALIDAÇÕES AMIGÁVEIS
+         ===================================================================== */
+      function maskCPF(value) {
+        const digits = onlyDigits(value).slice(0, 11);
+        if (digits.length > 9) {
+          return digits.slice(0, 3) + '.' + digits.slice(3, 6) + '.' + digits.slice(6, 9) + '-' + digits.slice(9);
+        }
+        if (digits.length > 6) {
+          return digits.slice(0, 3) + '.' + digits.slice(3, 6) + '.' + digits.slice(6);
+        }
+        if (digits.length > 3) {
+          return digits.slice(0, 3) + '.' + digits.slice(3);
+        }
+        return digits;
+      }
+
+      function isValidCPF(cpfRaw) {
+        const digits = onlyDigits(cpfRaw);
+        if (digits.length !== 11) return false;
+        if (/^(\d)\1{10}$/.test(digits)) return false;
+
+        let sum = 0;
+        for (let i = 0; i < 9; i++) {
+          sum += parseInt(digits.charAt(i), 10) * (10 - i);
+        }
+        let check1 = (sum * 10) % 11;
+        if (check1 === 10) check1 = 0;
+        if (check1 !== parseInt(digits.charAt(9), 10)) return false;
+
+        sum = 0;
+        for (let i = 0; i < 10; i++) {
+          sum += parseInt(digits.charAt(i), 10) * (11 - i);
+        }
+        let check2 = (sum * 10) % 11;
+        if (check2 === 10) check2 = 0;
+        return check2 === parseInt(digits.charAt(10), 10);
+      }
+
+      function maskPhone(value) {
+        const digits = onlyDigits(value).slice(0, 11);
+        if (digits.length === 0) return '';
+        if (digits.length <= 2) return '(' + digits;
+        if (digits.length <= 6) return '(' + digits.slice(0, 2) + ') ' + digits.slice(2);
+        if (digits.length <= 10) {
+          return '(' + digits.slice(0, 2) + ') ' + digits.slice(2, 6) + '-' + digits.slice(6);
+        }
+        return '(' + digits.slice(0, 2) + ') ' + digits.slice(2, 7) + '-' + digits.slice(7);
+      }
+
+      function maskCEP(value) {
+        const digits = onlyDigits(value).slice(0, 8);
+        if (digits.length <= 2) return digits;
+        if (digits.length <= 5) return digits.slice(0, 2) + '.' + digits.slice(2);
+        return digits.slice(0, 2) + '.' + digits.slice(2, 5) + '-' + digits.slice(5);
+      }
+
+      function validateNome(showError) {
+        const val = els.nomeInput.value.trim();
+        if (!val) {
+          if (showError) {
+            setInputValidationState(els.nomeInput, false);
+            setFeedback(els.nomeFeedback, 'Por favor, digite seu nome completo.', 'error');
+          } else {
+            setInputValidationState(els.nomeInput, null);
+            setFeedback(els.nomeFeedback, '', null);
+          }
+          return false;
+        }
+        if (val.length < 3 || !val.includes(' ')) {
+          if (showError) {
+            setInputValidationState(els.nomeInput, false);
+            setFeedback(els.nomeFeedback, 'Digite seu nome e sobrenome (igual está no documento).', 'error');
+          }
+          return false;
+        }
+        setInputValidationState(els.nomeInput, true);
+        setFeedback(els.nomeFeedback, '', null);
+        return true;
+      }
+
+      function validateCPFRealtime(showIncompleteError) {
+        const digits = onlyDigits(els.cpfInput.value);
+        if (digits.length === 0) {
+          if (showIncompleteError) {
+            setInputValidationState(els.cpfInput, false);
+            setFeedback(els.cpfFeedback, 'Por favor, digite o número do seu CPF.', 'error');
+          } else {
+            setInputValidationState(els.cpfInput, null);
+            setFeedback(els.cpfFeedback, '', null);
+          }
+          return false;
+        }
+        if (digits.length < 11) {
+          if (showIncompleteError) {
+            setInputValidationState(els.cpfInput, false);
+            setFeedback(els.cpfFeedback, 'Faltam números no CPF. Ele precisa ter 11 números.', 'error');
+          } else {
+            setInputValidationState(els.cpfInput, null);
+            setFeedback(els.cpfFeedback, 'Continue digitando os 11 números do CPF...', 'info');
+          }
+          return false;
+        }
+        if (isValidCPF(digits)) {
+          setInputValidationState(els.cpfInput, true);
+          setFeedback(els.cpfFeedback, 'CPF válido!', 'valid');
+          return true;
+        }
+        setInputValidationState(els.cpfInput, false);
+        setFeedback(els.cpfFeedback, 'Esse CPF não parece correto. Confira os números com calma.', 'error');
+        return false;
+      }
+
+      function validateDataNascimento(showError) {
+        const val = els.dataNascimentoInput.value;
+        if (!val) {
+          if (showError) {
+            setInputValidationState(els.dataNascimentoInput, false);
+            setFeedback(els.dataNascimentoFeedback, 'Por favor, informe sua data de nascimento.', 'error');
+          } else {
+            setInputValidationState(els.dataNascimentoInput, null);
+            setFeedback(els.dataNascimentoFeedback, '', null);
+          }
+          return false;
+        }
+        const today = getTodayISO();
+        if (val < '1900-01-01' || val > today) {
+          setInputValidationState(els.dataNascimentoInput, false);
+          setFeedback(els.dataNascimentoFeedback, 'Essa data não parece válida. Confira o dia, mês e ano.', 'error');
+          return false;
+        }
+        setInputValidationState(els.dataNascimentoInput, true);
+        setFeedback(els.dataNascimentoFeedback, '', null);
+        return true;
+      }
+
+      function validateTelefone(showError) {
+        const digits = onlyDigits(els.telefoneInput.value);
+        if (digits.length === 0) {
+          if (showError) {
+            setInputValidationState(els.telefoneInput, false);
+            setFeedback(els.telefoneFeedback, 'Por favor, informe seu telefone ou WhatsApp com DDD.', 'error');
+          } else {
+            setInputValidationState(els.telefoneInput, null);
+            setFeedback(els.telefoneFeedback, '', null);
+          }
+          return false;
+        }
+        if (digits.length < 10) {
+          if (showError) {
+            setInputValidationState(els.telefoneInput, false);
+            setFeedback(els.telefoneFeedback, 'O telefone parece incompleto. Digite o DDD (ex.: 22) e o número.', 'error');
+          } else {
+            setInputValidationState(els.telefoneInput, null);
+            setFeedback(els.telefoneFeedback, '', null);
+          }
+          return false;
+        }
+        setInputValidationState(els.telefoneInput, true);
+        setFeedback(els.telefoneFeedback, '', null);
+        return true;
+      }
+
+      function validateEmail(showError) {
+        const val = els.emailInput.value.trim();
+        if (!val) {
+          setInputValidationState(els.emailInput, null);
+          setFeedback(els.emailFeedback, '', null);
+          return true;
+        }
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+        if (!emailRegex.test(val)) {
+          if (showError) {
+            setInputValidationState(els.emailInput, false);
+            setFeedback(els.emailFeedback, 'Esse e-mail parece incorreto. Se não tiver e-mail, pode apagar e deixar em branco.', 'error');
+          }
+          return false;
+        }
+        setInputValidationState(els.emailInput, true);
+        setFeedback(els.emailFeedback, '', null);
+        return true;
+      }
+
+      /* =====================================================================
+         6. BUSCA DE CEP (VIACEP — OPCIONAL E NÃO BLOQUEANTE)
+         ===================================================================== */
+      async function fetchViaCEP(cepDigits) {
+        if (!/^\d{8}$/.test(cepDigits)) return;
+
+        if (state.cepAbortController) {
+          state.cepAbortController.abort();
+        }
+        state.cepAbortController = new AbortController();
+        const timeoutId = setTimeout(function () {
+          if (state.cepAbortController) state.cepAbortController.abort();
+        }, 6000);
+
+        setFeedback(els.cepFeedback, 'Procurando seu endereço...', 'info');
+
+        try {
+          const response = await fetch('https://viacep.com.br/ws/' + cepDigits + '/json/', {
+            method: 'GET',
+            signal: state.cepAbortController.signal
+          });
+          clearTimeout(timeoutId);
+
+          if (!response.ok) throw new Error('Falha CEP');
+
+          const data = await response.json();
+          if (data && data.erro) {
+            setFeedback(els.cepFeedback, 'Não encontramos esse CEP. Sem problema, escolha seu bairro abaixo.', 'info');
+            return;
+          }
+
+          if (data.logradouro) els.logradouroInput.value = data.logradouro;
+          if (data.localidade) els.cidadeInput.value = data.localidade;
+          if (data.bairro) {
+            const targetBairro = normalizeText(data.bairro);
+            const options = els.bairroSelect.options;
+            for (let i = 0; i < options.length; i++) {
+              if (normalizeText(options[i].value) === targetBairro) {
+                els.bairroSelect.value = options[i].value;
+                break;
+              }
+            }
+          }
+
+          setFeedback(els.cepFeedback, 'Endereço preenchido automaticamente!', 'valid');
+        } catch (err) {
+          clearTimeout(timeoutId);
+          if (err && err.name === 'AbortError') return;
+          setFeedback(els.cepFeedback, 'Pode preencher seu bairro e rua manualmente abaixo.', 'info');
+        }
+      }
+
+      /* =====================================================================
+         7. SUPABASE: CARREGAMENTO DE CURSOS E TURMAS (CONSULTAS INTACTAS)
+         ===================================================================== */
+      function initSupabaseClient() {
+        if (!window.supabase || typeof window.supabase.createClient !== 'function') {
+          throw new Error('Não foi possível iniciar o sistema. Recarregue a página e tente novamente.');
+        }
+        if (!supabaseClient) {
+          supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY, {
+            auth: {
+              persistSession: false,
+              autoRefreshToken: false,
+              detectSessionInUrl: false
+            }
+          });
+        }
+        return supabaseClient;
+      }
+
+      function getTurmasForCurso(cursoNome) {
+        const targetNorm = normalizeText(cursoNome);
+        return state.turmas.filter(function (turma) {
+          return turma.curso_nome === cursoNome || normalizeText(turma.curso_nome) === targetNorm;
+        });
+      }
+
+      function getSelectedCursoObject() {
+        if (!state.selectedCursoNome) return null;
+        return state.cursos.find(function (c) { return c.nome === state.selectedCursoNome; }) || null;
+      }
+
+      function getSelectedTurmaObject() {
+        if (!state.selectedTurmaId) return null;
+        return state.turmas.find(function (t) { return String(t.id) === String(state.selectedTurmaId); }) || null;
+      }
+
+      async function loadCoursesAndClasses() {
+        state.isLoading = true;
+        els.initialLoading.classList.remove('hidden');
+        els.loadErrorAlert.classList.add('hidden');
+        els.cpfGateSection.classList.add('hidden');
+        els.existingCandidateSection.classList.add('hidden');
+        els.formSection.classList.add('hidden');
+        els.progressCard.classList.add('hidden');
+        els.receiptSection.classList.add('hidden');
+
+        try {
+          const client = initSupabaseClient();
+
+          // 1. Lê o Processo Seletivo atual (ex: 1/2027, 2/2027 — Ativo ou Encerrado)
+          const procRes = await client
+            .from('processos_seletivos')
+            .select('id, codigo, titulo, status, proximos_passos, mensagem_encerrado')
+            .order('created_at', { ascending: false });
+
+          let activeProc = null;
+          if (!procRes.error && Array.isArray(procRes.data)) {
+            state.processosTableReady = true;
+            activeProc = procRes.data.find(function (p) { return p.status === 'Ativo'; }) || null;
+            state.processoAtual = activeProc || procRes.data[0] || null;
+            state.processoAberto = Boolean(activeProc);
+          } else {
+            // Fallback amigável caso a tabela processos_seletivos ainda não tenha sido criada no SQL
+            state.processosTableReady = false;
+            state.processoAtual = {
+              id: null,
+              codigo: '1/2027',
+              titulo: 'Processo Seletivo 1/2027 — CCP',
+              status: 'Ativo',
+              proximos_passos: DEFAULT_PROXIMOS_PASSOS,
+              mensagem_encerrado: DEFAULT_MSG_ENCERRADO
+            };
+            state.processoAberto = true;
+          }
+
+          // 2. Carrega cursos ativos e turmas abertas (filtrando pelo processo ativo quando existir)
+          async function fetchOpenTurmas() {
+            let qWithHorario = client
+              .from('turmas')
+              .select('id, curso_nome, identificador, dia_semana, turno, horario, data_inicio, data_fim')
+              .eq('status', 'Ativo')
+              .eq('matriculas_bloqueadas', false);
+            if (state.processosTableReady && activeProc) {
+              qWithHorario = qWithHorario.eq('processo_seletivo_id', activeProc.id);
+            }
+            const res1 = await qWithHorario;
+            if (!res1.error) return res1;
+
+            if (/(horario|processo_seletivo_id)/i.test(String(res1.error.message || ''))) {
+              let qFallback = client
+                .from('turmas')
+                .select('id, curso_nome, identificador, dia_semana, turno, data_inicio, data_fim')
+                .eq('status', 'Ativo')
+                .eq('matriculas_bloqueadas', false);
+              if (state.processosTableReady && activeProc && !/processo_seletivo_id/i.test(String(res1.error.message || ''))) {
+                qFallback = qFallback.eq('processo_seletivo_id', activeProc.id);
+              }
+              return qFallback;
+            }
+            return res1;
+          }
+
+          const [cursosRes, turmasRes] = await Promise.all([
+            client
+              .from('cursos')
+              .select('nome, carga_horaria, conteudo_programatico')
+              .eq('status', 'Ativo')
+              .order('nome'),
+            state.processoAberto ? fetchOpenTurmas() : Promise.resolve({ data: [], error: null })
+          ]);
+
+          if (cursosRes.error) {
+            throw new Error(cursosRes.error.message || 'Erro ao carregar os cursos.');
+          }
+          if (turmasRes.error) {
+            throw new Error(turmasRes.error.message || 'Erro ao carregar as turmas.');
+          }
+
+          state.cursos = Array.isArray(cursosRes.data) ? cursosRes.data : [];
+          state.turmas = Array.isArray(turmasRes.data) ? turmasRes.data : [];
+
+          applyProcessoUI();
+          renderCursosCards();
+          els.initialLoading.classList.add('hidden');
+          showCpfGateScreen(false);
+        } catch (err) {
+          els.initialLoading.classList.add('hidden');
+          els.loadErrorMessage.textContent = (err && err.message)
+            ? err.message
+            : 'Erro de conexão. Verifique sua internet e tente novamente.';
+          els.loadErrorAlert.classList.remove('hidden');
+        } finally {
+          state.isLoading = false;
+        }
+      }
+
+      /* =====================================================================
+         7B. TELA INICIAL (PROCESSO SELETIVO + CPF) E PAINEL DO CANDIDATO
+         ===================================================================== */
+      function getProcessoLabel() {
+        if (!state.processoAtual) return 'Processo Seletivo CCP 2027';
+        return state.processoAtual.titulo || ('Processo Seletivo ' + state.processoAtual.codigo + ' — CCP');
+      }
+
+      function getProximosPassosText() {
+        if (state.processoAtual && state.processoAtual.proximos_passos && String(state.processoAtual.proximos_passos).trim()) {
+          return String(state.processoAtual.proximos_passos).trim();
+        }
+        return DEFAULT_PROXIMOS_PASSOS;
+      }
+
+      function applyProcessoUI() {
+        const procLabel = getProcessoLabel();
+        const codigo = state.processoAtual && state.processoAtual.codigo ? String(state.processoAtual.codigo) : '2027';
+
+        els.headerProcessTitle.textContent = procLabel;
+        els.headerProcessSub.textContent = state.processoAberto
+          ? 'Inscrições Abertas • Cursos Gratuitos do Centro de Capacitação Profissional (CCP)'
+          : 'Inscrições Encerradas • Consulta de Comprovante e Próximos Passos';
+        els.receiptTitle.textContent = 'Comprovante de Inscrição — ' + procLabel;
+
+        els.gateProcessHeading.textContent = procLabel;
+
+        if (state.processoAberto) {
+          els.gateStatusPill.className = 'processo-status-pill is-open';
+          els.gateStatusPill.textContent = 'Inscrições Abertas — Edição ' + codigo;
+          els.gateProcessDesc.textContent =
+            'Para começar sua inscrição gratuita ou consultar uma inscrição já feita neste processo seletivo, digite o seu CPF abaixo.';
+          els.gateClosedNotice.classList.add('hidden');
+          els.gateClosedNextSteps.classList.add('hidden');
+          els.gateContinueText.textContent = 'Continuar →';
+        } else {
+          els.gateStatusPill.className = 'processo-status-pill is-closed';
+          els.gateStatusPill.textContent = 'Inscrições Encerradas — Edição ' + codigo;
+          els.gateProcessDesc.textContent =
+            'Digite o seu CPF abaixo para consultar sua inscrição, reimprimir o comprovante ou ver os próximos passos.';
+          els.gateClosedNotice.textContent = (state.processoAtual && state.processoAtual.mensagem_encerrado)
+            ? String(state.processoAtual.mensagem_encerrado)
+            : DEFAULT_MSG_ENCERRADO;
+          els.gateClosedNotice.classList.remove('hidden');
+          els.gateClosedNextStepsBody.textContent = getProximosPassosText();
+          els.gateClosedNextSteps.classList.remove('hidden');
+          els.gateContinueText.textContent = 'Consultar meu CPF →';
+        }
+      }
+
+      function hideGateAlert() {
+        els.gateAlert.classList.add('hidden');
+        els.gateAlertMessage.textContent = '';
+      }
+
+      function showGateAlert(title, message) {
+        els.gateAlertTitle.textContent = title || 'Atenção';
+        els.gateAlertMessage.textContent = message || '';
+        els.gateAlert.classList.remove('hidden');
+      }
+
+      function showCpfGateScreen(shouldFocus) {
+        hideGateAlert();
+        hideMobileStickyBar();
+        els.progressCard.classList.add('hidden');
+        els.formSection.classList.add('hidden');
+        els.existingCandidateSection.classList.add('hidden');
+        els.receiptSection.classList.add('hidden');
+        els.cpfGateSection.classList.remove('hidden');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        if (shouldFocus) {
+          els.gateCpfInput.focus();
+        }
+      }
+
+      function validateGateCPF(showIncompleteError) {
+        const digits = onlyDigits(els.gateCpfInput.value);
+        if (digits.length === 0) {
+          if (showIncompleteError) {
+            setInputValidationState(els.gateCpfInput, false);
+            setFeedback(els.gateCpfFeedback, 'Por favor, digite o número do seu CPF.', 'error');
+          } else {
+            setInputValidationState(els.gateCpfInput, null);
+            setFeedback(els.gateCpfFeedback, '', null);
+          }
+          return false;
+        }
+        if (digits.length < 11) {
+          if (showIncompleteError) {
+            setInputValidationState(els.gateCpfInput, false);
+            setFeedback(els.gateCpfFeedback, 'Faltam números no CPF. Ele precisa ter 11 números.', 'error');
+          } else {
+            setInputValidationState(els.gateCpfInput, null);
+            setFeedback(els.gateCpfFeedback, 'Continue digitando os 11 números do CPF...', 'info');
+          }
+          return false;
+        }
+        if (isValidCPF(digits)) {
+          setInputValidationState(els.gateCpfInput, true);
+          setFeedback(els.gateCpfFeedback, 'CPF válido!', 'valid');
+          return true;
+        }
+        setInputValidationState(els.gateCpfInput, false);
+        setFeedback(els.gateCpfFeedback, 'Esse CPF não parece correto. Confira os números com calma.', 'error');
+        return false;
+      }
+
+      function openWizardWithCpf(cpfFormatted) {
+        state.selectedCursoNome = '';
+        state.selectedTurmaId = '';
+        if (!state.autofilledKey.startsWith(onlyDigits(cpfFormatted) + '|')) {
+          state.autofilledKey = '';
+          els.autofillStatusBox.textContent = '';
+          els.autofillStatusBox.classList.add('hidden');
+        }
+        els.cpfInput.value = cpfFormatted;
+        validateCPFRealtime(false);
+        renderCursosCards();
+
+        els.cpfGateSection.classList.add('hidden');
+        els.existingCandidateSection.classList.add('hidden');
+        els.receiptSection.classList.add('hidden');
+        els.progressCard.classList.remove('hidden');
+        els.formSection.classList.remove('hidden');
+        goToStep(1, true);
+      }
+
+      function showExistingCandidateScreen() {
+        const count = state.existingInscricoes.length;
+        const firstNome = state.existingInscricoes[0] && state.existingInscricoes[0].nome
+          ? String(state.existingInscricoes[0].nome).trim().split(/\s+/)[0]
+          : '';
+
+        els.existingStatusPill.textContent = count === 1
+          ? '1 inscrição encontrada'
+          : count + ' inscrições encontradas';
+        els.existingHeading.textContent = firstNome
+          ? 'Olá, ' + firstNome + '! Encontramos sua inscrição'
+          : 'Encontramos sua inscrição!';
+        els.existingSubtitle.textContent =
+          'CPF ' + state.cpfConsultado + ' — ' + getProcessoLabel() + '. Você pode reimprimir seu comprovante ou conferir os próximos passos.';
+
+        els.existingList.replaceChildren();
+        state.existingInscricoes.forEach(function (reg) {
+          const item = document.createElement('div');
+          item.className = 'existing-item';
+
+          const top = document.createElement('div');
+          top.className = 'existing-item-top';
+
+          const proto = document.createElement('span');
+          proto.className = 'existing-proto';
+          proto.textContent = 'Protocolo: ' + String(reg.protocolo || '—');
+
+          const statusPill = document.createElement('span');
+          statusPill.className = 'meta-pill meta-pill-green';
+          statusPill.textContent = String(reg.status || 'Registrada');
+
+          top.appendChild(proto);
+          top.appendChild(statusPill);
+          item.appendChild(top);
+
+          const courseEl = document.createElement('div');
+          courseEl.className = 'existing-course';
+          courseEl.textContent = String(reg.curso_nome || 'Curso CCP');
+          item.appendChild(courseEl);
+
+          const horario = extractTurmaHorario({
+            horario: reg.horario,
+            identificador: reg.turma_identificador,
+            turno: reg.turno
+          });
+          const turnoLabel = formatTurnoAmigavel(reg.turno);
+
+          const meta1 = document.createElement('div');
+          meta1.className = 'existing-meta';
+          meta1.textContent = turnoLabel +
+            (horario ? ' (' + horario + ')' : '') +
+            (reg.dia_semana ? ' • ' + reg.dia_semana : '');
+          item.appendChild(meta1);
+
+          const meta2 = document.createElement('div');
+          meta2.className = 'existing-meta';
+          meta2.textContent = 'Registrada em: ' + formatDateTimeBR(reg.data_hora);
+          item.appendChild(meta2);
+
+          const reprintBtn = document.createElement('button');
+          reprintBtn.type = 'button';
+          reprintBtn.className = 'btn btn-primary existing-reprint-btn';
+          reprintBtn.textContent = 'Reimprimir Comprovante';
+          reprintBtn.addEventListener('click', function () {
+            state.receiptFromExisting = true;
+            renderReceipt({
+              protocolo: reg.protocolo || 'Não informado',
+              nome: reg.nome || 'Candidato(a)',
+              cpf: reg.cpf || state.cpfConsultado,
+              cursoNome: reg.curso_nome || 'Curso CCP',
+              cargaHoraria: reg.carga_horaria,
+              turmaIdentificador: extractTurmaShortName(reg.turma_identificador, reg.turno, reg.dia_semana) || 'Não informado',
+              turno: horario ? turnoLabel + ' (' + horario + ')' : (reg.turno || 'Não informado'),
+              diasSemana: reg.dia_semana || 'Conforme calendário do CCP',
+              periodo: formatPeriodo(reg.data_inicio, reg.data_fim),
+              dataHora: formatDateTimeBR(reg.data_hora)
+            });
+          });
+          item.appendChild(reprintBtn);
+
+          els.existingList.appendChild(item);
+        });
+
+        // Botão "Fazer Nova Inscrição" só aparece se o processo seletivo estiver Ativo
+        els.startNewFromExistingBtn.classList.toggle('hidden', !state.processoAberto);
+        els.existingNextStepsBody.textContent = getProximosPassosText();
+        els.existingNextStepsBox.classList.add('hidden');
+        els.toggleNextStepsBtn.textContent = 'Informações sobre os Próximos Passos';
+        els.toggleNextStepsBtn.setAttribute('aria-expanded', 'false');
+
+        hideMobileStickyBar();
+        els.cpfGateSection.classList.add('hidden');
+        els.formSection.classList.add('hidden');
+        els.progressCard.classList.add('hidden');
+        els.receiptSection.classList.add('hidden');
+        els.existingCandidateSection.classList.remove('hidden');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+
+      async function handleCpfGateSubmit(event) {
+        event.preventDefault();
+        if (state.isCheckingCpf || state.isLoading) return;
+        hideGateAlert();
+
+        if (!validateGateCPF(true)) {
+          els.gateCpfInput.focus();
+          return;
+        }
+
+        const cpfFormatted = els.gateCpfInput.value.trim();
+        state.cpfConsultado = cpfFormatted;
+        state.isCheckingCpf = true;
+        els.gateContinueBtn.disabled = true;
+        els.gateSpinner.classList.remove('hidden');
+        els.gateContinueText.textContent = 'Verificando CPF...';
+
+        try {
+          const client = initSupabaseClient();
+          const rpcPayload = {
+            p_cpf: cpfFormatted,
+            p_processo_id: (state.processosTableReady && state.processoAtual && state.processoAtual.id)
+              ? state.processoAtual.id
+              : null
+          };
+
+          const { data, error } = await client.rpc('consultar_inscricoes_por_cpf', rpcPayload);
+
+          let found = [];
+          if (!error && Array.isArray(data)) {
+            found = data;
+          } else if (error) {
+            // Se a RPC ainda não foi criada no SQL e o processo está aberto, permite prosseguir para nova inscrição
+            const isMissingRpc = /consultar_inscricoes_por_cpf|function|does not exist/i.test(String(error.message || ''));
+            if (!isMissingRpc) {
+              throw new Error(error.message || 'Erro ao consultar CPF.');
+            }
+          }
+
+          state.existingInscricoes = found;
+
+          if (found.length > 0) {
+            showExistingCandidateScreen();
+            return;
+          }
+
+          // Nenhuma inscrição encontrada para este CPF
+          if (state.processoAberto) {
+            openWizardWithCpf(cpfFormatted);
+          } else {
+            showGateAlert(
+              'Nenhuma inscrição encontrada',
+              'Não encontramos nenhuma inscrição para o CPF ' + cpfFormatted + ' neste processo seletivo. No momento as inscrições estão encerradas.'
+            );
+          }
+        } catch (err) {
+          showGateAlert(
+            'Não foi possível consultar agora',
+            (err && err.message) ? err.message : 'Verifique sua internet e tente novamente.'
+          );
+        } finally {
+          state.isCheckingCpf = false;
+          els.gateContinueBtn.disabled = false;
+          els.gateSpinner.classList.add('hidden');
+          els.gateContinueText.textContent = state.processoAberto ? 'Continuar →' : 'Consultar meu CPF →';
+        }
+      }
+
+      /* =====================================================================
+         8. RENDERIZAÇÃO DOS CARDS (PASSO 1 E PASSO 2 — SOMENTE DOM API)
+         ===================================================================== */
+      function formatTurnoAmigavel(turno) {
+        const norm = normalizeText(turno);
+        if (norm === 'manha') return 'Turno da Manhã';
+        if (norm === 'tarde') return 'Turno da Tarde';
+        if (norm === 'noite') return 'Turno da Noite';
+        if (norm === 'integral') return 'Turno Integral';
+        return turno ? 'Turno: ' + String(turno).trim() : 'Horário a definir';
+      }
+
+      function extractTurmaHorario(turma) {
+        if (!turma) return '';
+        if (turma.horario && String(turma.horario).trim()) {
+          return String(turma.horario).trim();
+        }
+        const sources = [turma.identificador, turma.turno];
+        for (let i = 0; i < sources.length; i++) {
+          const text = String(sources[i] || '');
+          const match = text.match(/(\d{1,2}:\d{2}\s*(?:às|as|a|-)\s*\d{1,2}:\d{2})/i);
+          if (match && match[1]) {
+            return match[1].replace(/\s*(?:as|a|-)\s*/i, ' às ').replace(/\s+/g, ' ').trim();
+          }
+        }
+        return '';
+      }
+
+      function hideMobileStickyBar() {
+        els.mobileStickyBar.classList.add('hidden');
+        document.body.classList.remove('has-sticky-bar');
+      }
+
+      function updateMobileStickyBar() {
+        const isWizardVisible = !els.formSection.classList.contains('hidden');
+        if (!isWizardVisible) {
+          hideMobileStickyBar();
+          return;
+        }
+
+        if (state.currentStep === 1 && state.selectedCursoNome) {
+          els.mobileStickyLabel.textContent = 'Selecionado: ' + state.selectedCursoNome;
+          els.mobileStickyBar.classList.remove('hidden');
+          document.body.classList.add('has-sticky-bar');
+          return;
+        }
+
+        if (state.currentStep === 2 && state.selectedTurmaId) {
+          const turma = getSelectedTurmaObject();
+          if (turma) {
+            const turnoLabel = formatTurnoAmigavel(turma.turno);
+            const horarioLabel = extractTurmaHorario(turma);
+            els.mobileStickyLabel.textContent = horarioLabel
+              ? 'Selecionado: ' + turnoLabel + ' — ' + horarioLabel
+              : 'Selecionado: ' + turnoLabel;
+            els.mobileStickyBar.classList.remove('hidden');
+            document.body.classList.add('has-sticky-bar');
+            return;
+          }
+        }
+
+        hideMobileStickyBar();
+      }
+
+      function buildCourseSummaryLine(curso, openTurmas) {
+        const cargaRaw = curso.carga_horaria !== null && curso.carga_horaria !== undefined
+          ? String(curso.carga_horaria).trim()
+          : '';
+        let cargaText = '';
+        if (cargaRaw) {
+          cargaText = /^\d+$/.test(cargaRaw) ? cargaRaw + ' horas de curso' : cargaRaw + ' de curso';
+        }
+
+        if (openTurmas.length === 0) {
+          return cargaText ? cargaText + ' — Sem turmas abertas no momento' : 'Sem turmas abertas no momento';
+        }
+
+        const horarioCountText = openTurmas.length === 1
+          ? '1 opção de horário'
+          : openTurmas.length + ' opções de horários';
+
+        return cargaText ? cargaText + ' — ' + horarioCountText : horarioCountText;
+      }
+
+      function moveRadioFocus(containerEl, currentCard, direction) {
+        const enabledCards = Array.from(containerEl.querySelectorAll('.choice-card:not(.is-disabled)'));
+        if (enabledCards.length < 2) return;
+        const currentIndex = enabledCards.indexOf(currentCard);
+        if (currentIndex === -1) return;
+        const nextIndex = (currentIndex + direction + enabledCards.length) % enabledCards.length;
+        enabledCards[nextIndex].focus();
+      }
+
+      function renderCursosCards(focusSelected) {
+        els.cursosCardsList.replaceChildren();
+
+        if (state.cursos.length === 0) {
+          const msg = document.createElement('div');
+          msg.className = 'alert alert-error';
+          msg.textContent = 'No momento não há cursos abertos para inscrição.';
+          els.cursosCardsList.appendChild(msg);
+          updateMobileStickyBar();
+          return;
+        }
+
+        let selectedCardEl = null;
+
+        state.cursos.forEach(function (curso, idx) {
+          const openTurmas = getTurmasForCurso(curso.nome);
+          const hasOpen = openTurmas.length > 0;
+          const isSelected = state.selectedCursoNome === curso.nome;
+
+          const card = document.createElement('div');
+          card.className = 'choice-card' + (isSelected ? ' is-selected' : '') + (!hasOpen ? ' is-disabled' : '');
+          card.setAttribute('role', 'radio');
+          card.setAttribute('aria-checked', String(isSelected));
+          card.setAttribute('aria-disabled', String(!hasOpen));
+          card.tabIndex = hasOpen ? 0 : -1;
+          if (isSelected) selectedCardEl = card;
+
+          // 1) Título + selo "Escolher" / "✓ Escolhido"
+          const top = document.createElement('div');
+          top.className = 'choice-card-top';
+
+          const title = document.createElement('div');
+          title.className = 'choice-card-title';
+          title.textContent = String(curso.nome || '');
+
+          const badge = document.createElement('span');
+          badge.className = 'choice-select-badge';
+          badge.setAttribute('aria-hidden', 'true');
+          badge.textContent = !hasOpen
+            ? 'Indisponível'
+            : (isSelected ? '\u2713 Escolhido' : 'Escolher');
+
+          top.appendChild(title);
+          top.appendChild(badge);
+          card.appendChild(top);
+
+          // 2) Uma linha curta e leve abaixo do título
+          const summaryLine = document.createElement('p');
+          summaryLine.className = 'choice-support-line';
+          summaryLine.textContent = buildCourseSummaryLine(curso, openTurmas);
+          card.appendChild(summaryLine);
+
+          // 3) Link discreto opcional para o conteúdo programático
+          const conteudo = curso.conteudo_programatico ? String(curso.conteudo_programatico).trim() : '';
+          if (conteudo) {
+            const sylBoxId = 'syllabusBox-' + idx;
+            const sylLink = document.createElement('button');
+            sylLink.type = 'button';
+            sylLink.className = 'syllabus-link';
+            sylLink.setAttribute('aria-expanded', 'false');
+            sylLink.setAttribute('aria-controls', sylBoxId);
+            sylLink.textContent = 'Ver o que você vai aprender';
+
+            const sylBox = document.createElement('div');
+            sylBox.id = sylBoxId;
+            sylBox.className = 'syllabus-box hidden';
+            sylBox.textContent = conteudo;
+
+            sylLink.addEventListener('click', function (e) {
+              e.stopPropagation();
+              const isHidden = sylBox.classList.contains('hidden');
+              sylBox.classList.toggle('hidden', !isHidden);
+              sylLink.setAttribute('aria-expanded', String(isHidden));
+              sylLink.textContent = isHidden ? 'Esconder conteúdo' : 'Ver o que você vai aprender';
+            });
+
+            card.appendChild(sylLink);
+            card.appendChild(sylBox);
+          }
+
+          if (hasOpen) {
+            function selectThisCurso(viaKeyboard) {
+              if (state.selectedCursoNome !== curso.nome) {
+                state.selectedCursoNome = curso.nome;
+                state.selectedTurmaId = '';
+              }
+              hideStepAlert();
+              renderCursosCards(Boolean(viaKeyboard));
+              updateMobileStickyBar();
+            }
+
+            card.addEventListener('click', function () {
+              selectThisCurso(false);
+            });
+            card.addEventListener('keydown', function (e) {
+              if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                selectThisCurso(true);
+              } else if (e.key === 'ArrowDown' || e.key === 'ArrowRight') {
+                e.preventDefault();
+                moveRadioFocus(els.cursosCardsList, card, 1);
+              } else if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') {
+                e.preventDefault();
+                moveRadioFocus(els.cursosCardsList, card, -1);
+              }
+            });
+          }
+
+          els.cursosCardsList.appendChild(card);
+        });
+
+        if (focusSelected && selectedCardEl) {
+          selectedCardEl.focus();
+        }
+
+        updateMobileStickyBar();
+      }
+
+      function renderTurmasCards(focusSelected) {
+        els.turmasCardsList.replaceChildren();
+        const curso = getSelectedCursoObject();
+        els.step2CursoName.textContent = curso ? curso.nome : '';
+
+        const turmasDisponiveis = curso ? getTurmasForCurso(curso.nome) : [];
+
+        if (turmasDisponiveis.length === 0) {
+          const msg = document.createElement('div');
+          msg.className = 'alert alert-error';
+          msg.textContent = 'Não há turmas abertas para este curso no momento. Volte e escolha outro curso.';
+          els.turmasCardsList.appendChild(msg);
+          updateMobileStickyBar();
+          return;
+        }
+
+        let selectedCardEl = null;
+
+        turmasDisponiveis.forEach(function (turma) {
+          const isSelected = String(state.selectedTurmaId) === String(turma.id);
+          const turnoLabel = formatTurnoAmigavel(turma.turno);
+          const horarioLabel = extractTurmaHorario(turma);
+
+          const card = document.createElement('div');
+          card.className = 'choice-card' + (isSelected ? ' is-selected' : '');
+          card.setAttribute('role', 'radio');
+          card.setAttribute('aria-checked', String(isSelected));
+          card.tabIndex = 0;
+          if (isSelected) selectedCardEl = card;
+
+          // 1) Horário em destaque + selo "Escolher" / "✓ Escolhido"
+          const top = document.createElement('div');
+          top.className = 'choice-card-top';
+
+          const title = document.createElement('div');
+          title.className = 'choice-card-title';
+          title.textContent = horarioLabel
+            ? turnoLabel + ' — ' + horarioLabel
+            : turnoLabel;
+
+          const badge = document.createElement('span');
+          badge.className = 'choice-select-badge';
+          badge.setAttribute('aria-hidden', 'true');
+          badge.textContent = isSelected ? '\u2713 Escolhido' : 'Escolher';
+
+          top.appendChild(title);
+          top.appendChild(badge);
+          card.appendChild(top);
+
+          // 2) Textos de apoio leves (peso normal, 16px, line-height 1.55)
+          const supportStack = document.createElement('div');
+          supportStack.className = 'choice-support-stack';
+
+          const daysEl = document.createElement('p');
+          daysEl.className = 'choice-support-line';
+          daysEl.textContent = 'Dias de aula: ' + String(turma.dia_semana || 'Conforme calendário do CCP');
+          supportStack.appendChild(daysEl);
+
+          const periodoEl = document.createElement('p');
+          periodoEl.className = 'choice-support-line';
+          periodoEl.textContent = 'Período: ' + formatPeriodo(turma.data_inicio, turma.data_fim);
+          supportStack.appendChild(periodoEl);
+
+          card.appendChild(supportStack);
+
+          function selectThisTurma(viaKeyboard) {
+            state.selectedTurmaId = String(turma.id);
+            hideStepAlert();
+            renderTurmasCards(Boolean(viaKeyboard));
+            updateMobileStickyBar();
+          }
+
+          card.addEventListener('click', function () {
+            selectThisTurma(false);
+          });
+          card.addEventListener('keydown', function (e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+              e.preventDefault();
+              selectThisTurma(true);
+            } else if (e.key === 'ArrowDown' || e.key === 'ArrowRight') {
+              e.preventDefault();
+              moveRadioFocus(els.turmasCardsList, card, 1);
+            } else if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') {
+              e.preventDefault();
+              moveRadioFocus(els.turmasCardsList, card, -1);
+            }
+          });
+
+          els.turmasCardsList.appendChild(card);
+        });
+
+        if (focusSelected && selectedCardEl) {
+          selectedCardEl.focus();
+        }
+
+        updateMobileStickyBar();
+      }
+
+      /* =====================================================================
+         9. NAVEGAÇÃO DO WIZARD (5 PASSOS + VALIDAÇÃO POR ETAPA)
+         ===================================================================== */
+      function goToStep(stepNumber, shouldScroll) {
+        state.currentStep = stepNumber;
+        hideStepAlert();
+
+        els.stepEls.forEach(function (stepEl, idx) {
+          stepEl.classList.toggle('hidden', (idx + 1) !== stepNumber);
+        });
+
+        const pct = Math.round((stepNumber / 5) * 100);
+        els.progressStepBadge.textContent = 'Passo ' + stepNumber + ' de 5';
+        els.progressStepName.textContent = STEP_TITLES[stepNumber - 1] || '';
+        els.progressBarTrack.setAttribute('aria-valuenow', String(stepNumber));
+        els.progressFill.style.width = pct + '%';
+
+        if (stepNumber === 2) {
+          renderTurmasCards();
+        } else if (stepNumber === 5) {
+          updateStep5Summary();
+        }
+
+        updateMobileStickyBar();
+
+        if (shouldScroll !== false) {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+      }
+
+      function updateStep5Summary() {
+        const curso = getSelectedCursoObject();
+        const turma = getSelectedTurmaObject();
+        els.summaryCurso.textContent = curso ? curso.nome : '—';
+        if (turma) {
+          const turnoAmigavel = formatTurnoAmigavel(turma.turno);
+          const horario = extractTurmaHorario(turma);
+          els.summaryTurma.textContent = turnoAmigavel +
+            (horario ? ' (' + horario + ')' : '') +
+            (turma.dia_semana ? ' • ' + turma.dia_semana : '');
+        } else {
+          els.summaryTurma.textContent = '—';
+        }
+        els.summaryNome.textContent = els.nomeInput.value.trim() || '—';
+      }
+
+      function validateStep1() {
+        const curso = getSelectedCursoObject();
+        if (!curso) {
+          showStepAlert('Escolha um curso primeiro', 'Toque em um dos cursos disponíveis acima para continuar.');
+          return false;
+        }
+        if (getTurmasForCurso(curso.nome).length === 0) {
+          showStepAlert('Curso sem turmas abertas', 'Este curso não tem turmas abertas agora. Por favor, escolha outro curso.');
+          return false;
+        }
+        return true;
+      }
+
+      function validateStep2() {
+        const turma = getSelectedTurmaObject();
+        if (!turma) {
+          showStepAlert('Escolha um dia e horário', 'Toque em uma das opções de turma acima para continuar.');
+          return false;
+        }
+        return true;
+      }
+
+      function validateStep3() {
+        let firstInvalid = null;
+
+        if (!validateCPFRealtime(true) && !firstInvalid) firstInvalid = els.cpfInput;
+        if (!validateDataNascimento(true) && !firstInvalid) firstInvalid = els.dataNascimentoInput;
+        if (!validateNome(true) && !firstInvalid) firstInvalid = els.nomeInput;
+        if (!validateTelefone(true) && !firstInvalid) firstInvalid = els.telefoneInput;
+        if (!validateEmail(true) && !firstInvalid) firstInvalid = els.emailInput;
+
+        if (firstInvalid) {
+          showStepAlert('Falta preencher ou corrigir um campo', 'Confira os avisos em vermelho abaixo antes de continuar.');
+          firstInvalid.focus();
+          firstInvalid.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          return false;
+        }
+        return true;
+      }
+
+      function validateStep5() {
+        if (!els.lgpdCheckbox.checked) {
+          els.lgpdBox.classList.add('is-invalid');
+          setFeedback(els.lgpdFeedback, 'Marque a caixinha acima para concordar e finalizar sua inscrição.', 'error');
+          showStepAlert('Falta marcar o termo de privacidade', 'Toque na caixinha verde de concordância (LGPD) antes de finalizar.');
+          els.lgpdCheckbox.focus();
+          els.lgpdBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          return false;
+        }
+        els.lgpdBox.classList.remove('is-invalid');
+        setFeedback(els.lgpdFeedback, '', null);
+        return true;
+      }
+
+      /* =====================================================================
+         10. BOTÕES DE SELEÇÃO RÁPIDA (SEXO, CADÚNICO, ALERGIA, MEDICAMENTO)
+         ===================================================================== */
+      function bindYesNoGroup(groupEl, stateKey, wrapEl, inputEl) {
+        const buttons = groupEl.querySelectorAll('.toggle-choice-btn');
+        buttons.forEach(function (btn) {
+          btn.addEventListener('click', function () {
+            const val = btn.dataset.val === 'Sim' ? 'Sim' : 'Não';
+            state[stateKey] = val;
+            buttons.forEach(function (b) {
+              const active = b.dataset.val === val;
+              b.classList.toggle('is-active', active);
+              b.setAttribute('aria-pressed', String(active));
+            });
+            if (val === 'Sim') {
+              wrapEl.classList.remove('hidden');
+              inputEl.focus();
+            } else {
+              wrapEl.classList.add('hidden');
+              inputEl.value = '';
+            }
+          });
+        });
+      }
+
+      function resetYesNoGroup(groupEl, stateKey, wrapEl, inputEl) {
+        state[stateKey] = 'Não';
+        const buttons = groupEl.querySelectorAll('.toggle-choice-btn');
+        buttons.forEach(function (b) {
+          const active = b.dataset.val === 'Não';
+          b.classList.toggle('is-active', active);
+          b.setAttribute('aria-pressed', String(active));
+        });
+        wrapEl.classList.add('hidden');
+        inputEl.value = '';
+      }
+
+      function setYesNoGroupFromString(rawVal, groupEl, stateKey, wrapEl, inputEl) {
+        const str = String(rawVal || '').trim();
+        const isSim = /^sim\b/i.test(str);
+        const choice = isSim ? 'Sim' : 'Não';
+        state[stateKey] = choice;
+
+        const buttons = groupEl.querySelectorAll('.toggle-choice-btn');
+        buttons.forEach(function (b) {
+          const active = b.dataset.val === choice;
+          b.classList.toggle('is-active', active);
+          b.setAttribute('aria-pressed', String(active));
+        });
+
+        if (isSim) {
+          const detail = str.replace(/^sim\s*[-–:]?\s*/i, '').trim();
+          wrapEl.classList.remove('hidden');
+          inputEl.value = detail;
+        } else {
+          wrapEl.classList.add('hidden');
+          inputEl.value = '';
+        }
+      }
+
+      function applyAutofilledCandidateData(profile) {
+        if (!profile) return;
+
+        if (profile.nome) {
+          els.nomeInput.value = String(profile.nome).trim();
+          validateNome(false);
+        }
+
+        if (profile.sexo) {
+          const sexoNorm = normalizeText(profile.sexo);
+          state.sexo = '';
+          els.sexoBtnGroup.querySelectorAll('.toggle-choice-btn').forEach(function (b) {
+            const match = normalizeText(b.dataset.sexo) === sexoNorm;
+            if (match) state.sexo = b.dataset.sexo;
+            b.classList.toggle('is-active', match);
+            b.setAttribute('aria-pressed', String(match));
+          });
+        }
+
+        if (profile.telefone) {
+          els.telefoneInput.value = maskPhone(profile.telefone);
+          validateTelefone(false);
+        }
+
+        if (profile.email) {
+          els.emailInput.value = String(profile.email).trim();
+          validateEmail(false);
+        }
+
+        if (profile.cep) {
+          els.cepInput.value = maskCEP(profile.cep);
+        }
+        if (profile.cidade) {
+          els.cidadeInput.value = String(profile.cidade).trim();
+        }
+        if (profile.logradouro) {
+          els.logradouroInput.value = String(profile.logradouro).trim();
+        }
+        if (profile.bairro) {
+          const targetBairro = normalizeText(profile.bairro);
+          const options = els.bairroSelect.options;
+          for (let i = 0; i < options.length; i++) {
+            if (normalizeText(options[i].value) === targetBairro) {
+              els.bairroSelect.value = options[i].value;
+              break;
+            }
+          }
+        }
+        if (profile.referencia) {
+          els.referenciaInput.value = String(profile.referencia).trim();
+        }
+        if (profile.escolaridade) {
+          const targetEsc = normalizeText(profile.escolaridade);
+          const escOptions = els.escolaridadeSelect.options;
+          for (let i = 0; i < escOptions.length; i++) {
+            if (normalizeText(escOptions[i].value) === targetEsc) {
+              els.escolaridadeSelect.value = escOptions[i].value;
+              break;
+            }
+          }
+        }
+
+        if (profile.tipo_sanguineo) {
+          const targetSang = String(profile.tipo_sanguineo).trim();
+          const sangOptions = els.tipoSanguineoSelect.options;
+          for (let i = 0; i < sangOptions.length; i++) {
+            if (sangOptions[i].value === targetSang) {
+              els.tipoSanguineoSelect.value = sangOptions[i].value;
+              break;
+            }
+          }
+        }
+
+        setYesNoGroupFromString(profile.cadunico, els.cadunicoBtnGroup, 'cadunicoChoice', els.cadunicoDetalheWrap, els.cadunicoDetalheInput);
+        setYesNoGroupFromString(profile.alergia, els.alergiaBtnGroup, 'alergiaChoice', els.alergiaDetalheWrap, els.alergiaDetalheInput);
+        setYesNoGroupFromString(profile.medicamento, els.medicamentoBtnGroup, 'medicamentoChoice', els.medicamentoDetalheWrap, els.medicamentoDetalheInput);
+
+        els.autofillStatusBox.textContent =
+          '\u2713 Cadastro anterior confirmado! Preenchemos seus dados automaticamente — confira se está tudo certo e toque em Continuar.';
+        els.autofillStatusBox.classList.remove('hidden');
+      }
+
+      async function trySecureAutofill() {
+        const cpfFormatted = els.cpfInput.value.trim();
+        const cpfDigits = onlyDigits(cpfFormatted);
+        const dataNasc = els.dataNascimentoInput.value;
+
+        if (!isValidCPF(cpfDigits) || !/^\d{4}-\d{2}-\d{2}$/.test(dataNasc)) {
+          return;
+        }
+
+        const key = cpfDigits + '|' + dataNasc;
+        if (state.autofilledKey === key) return;
+
+        try {
+          const client = initSupabaseClient();
+          const { data, error } = await client.rpc('obter_dados_candidato_verificado', {
+            p_cpf: cpfFormatted,
+            p_data_nascimento: dataNasc
+          });
+
+          if (error || !data) return;
+
+          state.autofilledKey = key;
+          applyAutofilledCandidateData(data);
+        } catch (_err) {
+          // Falha silenciosa: candidato preenche normalmente sem bloqueio
+        }
+      }
+
+      function buildConditionalValue(choice, inputEl) {
+        if (choice !== 'Sim') return 'Não';
+        const detail = inputEl.value.trim();
+        return detail ? 'Sim - ' + detail : 'Sim';
+      }
+
+      /* =====================================================================
+         11. MODAL LGPD
+         ===================================================================== */
+      function openLgpdModal() {
+        state.lastFocusedBeforeModal = document.activeElement;
+        els.lgpdModal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+        els.closeLgpdModalX.focus();
+      }
+
+      function closeLgpdModal() {
+        els.lgpdModal.classList.add('hidden');
+        document.body.style.overflow = '';
+        if (state.lastFocusedBeforeModal && typeof state.lastFocusedBeforeModal.focus === 'function') {
+          state.lastFocusedBeforeModal.focus();
+        }
+      }
+
+      /* =====================================================================
+         12. SUBMISSÃO EXCLUSIVA VIA RPC registrar_inscricao (22 PARÂMETROS)
+         ===================================================================== */
+      function setSubmittingState(isSubmitting) {
+        state.isSubmitting = isSubmitting;
+        els.submitBtn.disabled = isSubmitting;
+        els.backToStep4Btn.disabled = isSubmitting;
+        if (isSubmitting) {
+          els.submitBtnSpinner.classList.remove('hidden');
+          els.submitBtnText.textContent = 'ENVIANDO SUA INSCRIÇÃO...';
+        } else {
+          els.submitBtnSpinner.classList.add('hidden');
+          els.submitBtnText.textContent = 'FINALIZAR MINHA INSCRIÇÃO';
+        }
+      }
+
+      async function handleFormSubmit(event) {
+        event.preventDefault();
+        if (state.isSubmitting || state.isLoading) return;
+
+        hideStepAlert();
+
+        if (!validateStep1()) {
+          goToStep(1);
+          return;
+        }
+        if (!validateStep2()) {
+          goToStep(2);
+          return;
+        }
+        if (!validateStep3()) {
+          goToStep(3);
+          return;
+        }
+        if (!validateStep5()) {
+          return;
+        }
+
+        const curso = getSelectedCursoObject();
+        const turma = getSelectedTurmaObject();
+
+        const payload = {
+          p_turma_id: turma.id,
+          p_nome: els.nomeInput.value.trim(),
+          p_cpf: els.cpfInput.value.trim(),
+          p_data_nascimento: els.dataNascimentoInput.value,
+          p_sexo: state.sexo || null,
+          p_telefone: els.telefoneInput.value.trim(),
+          p_email: els.emailInput.value.trim() || null,
+          p_cep: els.cepInput.value.trim() || null,
+          p_cidade: els.cidadeInput.value.trim() || 'Iguaba Grande',
+          p_logradouro: els.logradouroInput.value.trim() || null,
+          p_bairro: els.bairroSelect.value || null,
+          p_referencia: els.referenciaInput.value.trim() || null,
+          p_escolaridade: els.escolaridadeSelect.value || null,
+          p_tipo_sanguineo: els.tipoSanguineoSelect.value || 'Não Informado',
+          p_cadunico: buildConditionalValue(state.cadunicoChoice, els.cadunicoDetalheInput),
+          p_alergia: buildConditionalValue(state.alergiaChoice, els.alergiaDetalheInput),
+          p_medicamento: buildConditionalValue(state.medicamentoChoice, els.medicamentoDetalheInput),
+          p_observacoes: null,
+          p_tempo_residencia_meses: 0,
+          p_renda_per_capita: null,
+          p_desempregado: false,
+          p_lgpd_aceite: Boolean(els.lgpdCheckbox.checked)
+        };
+
+        setSubmittingState(true);
+
+        try {
+          const client = initSupabaseClient();
+          const { data, error } = await client.rpc('registrar_inscricao', payload);
+
+          if (error) {
+            throw new Error(error.message || 'Erro ao registrar a inscrição no servidor.');
+          }
+
+          const result = Array.isArray(data) ? data[0] : data;
+
+          if (!result || result.sucesso !== true) {
+            const msg = (result && (result.mensagem || result.erro || result.message))
+              ? String(result.mensagem || result.erro || result.message)
+              : 'Não foi possível confirmar sua inscrição. Confira seus dados e tente novamente.';
+            showStepAlert('Inscrição não concluída', msg);
+            return;
+          }
+
+          const turnoComHorario = (function () {
+            const base = formatTurnoAmigavel(turma.turno);
+            const h = extractTurmaHorario(turma);
+            return h ? base + ' (' + h + ')' : (turma.turno || 'Não informado');
+          })();
+
+          state.receiptFromExisting = false;
+          renderReceipt({
+            protocolo: result.protocolo || 'Não informado',
+            nome: payload.p_nome,
+            cpf: payload.p_cpf,
+            cursoNome: curso.nome,
+            cargaHoraria: curso.carga_horaria,
+            turmaIdentificador: extractTurmaShortName(turma.identificador, turma.turno, turma.dia_semana) || 'Não informado',
+            turno: turnoComHorario,
+            diasSemana: turma.dia_semana || 'Conforme calendário do CCP',
+            periodo: formatPeriodo(turma.data_inicio, turma.data_fim),
+            dataHora: formatDateTimeBR(result.data_hora || result.created_at || new Date())
+          });
+        } catch (err) {
+          const msg = (err && err.message)
+            ? err.message
+            : 'Falha de conexão ao enviar sua inscrição. Verifique sua internet e tente novamente.';
+          showStepAlert('Não foi possível enviar agora', msg);
+        } finally {
+          setSubmittingState(false);
+        }
+      }
+
+      /* =====================================================================
+         13. COMPROVANTE IMPRIMÍVEL E NOVA INSCRIÇÃO
+         ===================================================================== */
+      function renderReceipt(info) {
+        els.receiptProtocolo.textContent = String(info.protocolo);
+        els.receiptNome.textContent = String(info.nome);
+        els.receiptCpf.textContent = String(info.cpf);
+        els.receiptCurso.textContent = info.cargaHoraria
+          ? String(info.cursoNome) + ' (' + formatCargaHoraria(info.cargaHoraria) + ')'
+          : String(info.cursoNome);
+        els.receiptTurma.textContent = String(info.turmaIdentificador);
+        els.receiptTurno.textContent = String(info.turno);
+        els.receiptDias.textContent = String(info.diasSemana);
+        els.receiptPeriodo.textContent = String(info.periodo);
+        els.receiptDataHora.textContent = String(info.dataHora);
+
+        els.backToExistingFromReceiptBtn.classList.toggle('hidden', !state.receiptFromExisting);
+        els.newRegistrationBtn.classList.toggle('hidden', !state.processoAberto);
+
+        hideMobileStickyBar();
+        els.cpfGateSection.classList.add('hidden');
+        els.existingCandidateSection.classList.add('hidden');
+        els.formSection.classList.add('hidden');
+        els.progressCard.classList.add('hidden');
+        els.receiptSection.classList.remove('hidden');
+
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+
+      function resetForNewRegistration() {
+        els.form.reset();
+        state.selectedCursoNome = '';
+        state.selectedTurmaId = '';
+        state.sexo = '';
+        state.cpfConsultado = '';
+        state.autofilledKey = '';
+        state.existingInscricoes = [];
+        state.receiptFromExisting = false;
+        els.autofillStatusBox.textContent = '';
+        els.autofillStatusBox.classList.add('hidden');
+
+        els.gateCpfInput.value = '';
+        setInputValidationState(els.gateCpfInput, null);
+        setFeedback(els.gateCpfFeedback, '', null);
+        hideGateAlert();
+
+        els.cidadeInput.value = 'Iguaba Grande';
+        els.tipoSanguineoSelect.value = 'Não Informado';
+
+        els.sexoBtnGroup.querySelectorAll('.toggle-choice-btn').forEach(function (b) {
+          b.classList.remove('is-active');
+          b.setAttribute('aria-pressed', 'false');
+        });
+
+        resetYesNoGroup(els.cadunicoBtnGroup, 'cadunicoChoice', els.cadunicoDetalheWrap, els.cadunicoDetalheInput);
+        resetYesNoGroup(els.alergiaBtnGroup, 'alergiaChoice', els.alergiaDetalheWrap, els.alergiaDetalheInput);
+        resetYesNoGroup(els.medicamentoBtnGroup, 'medicamentoChoice', els.medicamentoDetalheWrap, els.medicamentoDetalheInput);
+
+        [els.nomeInput, els.cpfInput, els.dataNascimentoInput, els.telefoneInput, els.emailInput].forEach(function (el) {
+          setInputValidationState(el, null);
+        });
+
+        [
+          els.nomeFeedback, els.cpfFeedback, els.dataNascimentoFeedback,
+          els.telefoneFeedback, els.emailFeedback, els.cepFeedback, els.lgpdFeedback
+        ].forEach(function (el) {
+          setFeedback(el, '', null);
+        });
+
+        els.lgpdBox.classList.remove('is-invalid');
+        hideStepAlert();
+
+        els.receiptSection.classList.add('hidden');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        loadCoursesAndClasses();
+      }
+
+      async function handleCopyProtocol() {
+        const protocolText = els.receiptProtocolo.textContent.trim();
+        if (!protocolText) return;
+        let copied = false;
+        try {
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            await navigator.clipboard.writeText(protocolText);
+            copied = true;
+          } else {
+            const tempInput = document.createElement('textarea');
+            tempInput.value = protocolText;
+            tempInput.setAttribute('readonly', '');
+            tempInput.style.position = 'fixed';
+            tempInput.style.left = '-9999px';
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            copied = document.execCommand('copy');
+            document.body.removeChild(tempInput);
+          }
+        } catch (_err) {
+          copied = false;
+        }
+        els.copyProtocolBtn.textContent = copied ? 'Protocolo copiado!' : 'Anote o número acima';
+        setTimeout(function () {
+          els.copyProtocolBtn.textContent = 'Copiar número de protocolo';
+        }, 2200);
+      }
+
+      /* =====================================================================
+         14. EVENT LISTENERS E INICIALIZAÇÃO
+         ===================================================================== */
+      function bindEvents() {
+        els.retryLoadBtn.addEventListener('click', loadCoursesAndClasses);
+
+        // Tela Inicial (CPF) e Painel do Candidato
+        els.gateCpfInput.addEventListener('input', function () {
+          els.gateCpfInput.value = maskCPF(els.gateCpfInput.value);
+          hideGateAlert();
+          validateGateCPF(false);
+        });
+        els.gateCpfInput.addEventListener('blur', function () {
+          validateGateCPF(true);
+        });
+        els.cpfGateForm.addEventListener('submit', handleCpfGateSubmit);
+
+        els.startNewFromExistingBtn.addEventListener('click', function () {
+          if (state.processoAberto) {
+            openWizardWithCpf(state.cpfConsultado);
+          }
+        });
+        els.toggleNextStepsBtn.addEventListener('click', function () {
+          const isHidden = els.existingNextStepsBox.classList.contains('hidden');
+          els.existingNextStepsBox.classList.toggle('hidden', !isHidden);
+          els.toggleNextStepsBtn.setAttribute('aria-expanded', String(isHidden));
+          els.toggleNextStepsBtn.textContent = isHidden
+            ? 'Esconder Próximos Passos'
+            : 'Informações sobre os Próximos Passos';
+          if (isHidden) {
+            els.existingNextStepsBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          }
+        });
+        els.changeCpfBtn.addEventListener('click', function () {
+          els.gateCpfInput.value = '';
+          setInputValidationState(els.gateCpfInput, null);
+          setFeedback(els.gateCpfFeedback, '', null);
+          showCpfGateScreen(true);
+        });
+
+        // Navegação do Wizard
+        els.backToGateBtn.addEventListener('click', function () {
+          if (state.existingInscricoes.length > 0) {
+            showExistingCandidateScreen();
+          } else {
+            showCpfGateScreen(true);
+          }
+        });
+        els.nextFromStep1Btn.addEventListener('click', function () {
+          if (validateStep1()) goToStep(2);
+        });
+        els.mobileStickyContinueBtn.addEventListener('click', function () {
+          if (state.currentStep === 1 && validateStep1()) {
+            goToStep(2);
+          } else if (state.currentStep === 2 && validateStep2()) {
+            goToStep(3);
+          }
+        });
+        els.backToStep1Btn.addEventListener('click', function () {
+          goToStep(1);
+        });
+        els.nextFromStep2Btn.addEventListener('click', function () {
+          if (validateStep2()) goToStep(3);
+        });
+        els.backToStep2Btn.addEventListener('click', function () {
+          goToStep(2);
+        });
+        els.nextFromStep3Btn.addEventListener('click', function () {
+          if (validateStep3()) goToStep(4);
+        });
+        els.backToStep3Btn.addEventListener('click', function () {
+          goToStep(3);
+        });
+        els.nextFromStep4Btn.addEventListener('click', function () {
+          goToStep(5);
+        });
+        els.backToStep4Btn.addEventListener('click', function () {
+          goToStep(4);
+        });
+
+        // Validações e máscaras Passo 3
+        els.nomeInput.addEventListener('blur', function () { validateNome(true); });
+        els.cpfInput.addEventListener('input', function () {
+          els.cpfInput.value = maskCPF(els.cpfInput.value);
+          validateCPFRealtime(false);
+        });
+        els.cpfInput.addEventListener('blur', function () {
+          validateCPFRealtime(true);
+          trySecureAutofill();
+        });
+        els.dataNascimentoInput.addEventListener('change', function () {
+          if (validateDataNascimento(true)) {
+            trySecureAutofill();
+          }
+        });
+        els.telefoneInput.addEventListener('input', function () {
+          els.telefoneInput.value = maskPhone(els.telefoneInput.value);
+          validateTelefone(false);
+        });
+        els.telefoneInput.addEventListener('blur', function () { validateTelefone(true); });
+        els.emailInput.addEventListener('blur', function () { validateEmail(true); });
+
+        // Botões rápidos de Sexo
+        const sexoBtns = els.sexoBtnGroup.querySelectorAll('.toggle-choice-btn');
+        sexoBtns.forEach(function (btn) {
+          btn.addEventListener('click', function () {
+            const chosen = btn.dataset.sexo || '';
+            state.sexo = (state.sexo === chosen) ? '' : chosen;
+            sexoBtns.forEach(function (b) {
+              const active = b.dataset.sexo === state.sexo;
+              b.classList.toggle('is-active', active);
+              b.setAttribute('aria-pressed', String(active));
+            });
+          });
+        });
+
+        // CEP (Passo 4)
+        els.cepInput.addEventListener('input', function () {
+          els.cepInput.value = maskCEP(els.cepInput.value);
+          const digits = onlyDigits(els.cepInput.value);
+          if (digits.length === 8) {
+            fetchViaCEP(digits);
+          } else {
+            setFeedback(els.cepFeedback, '', null);
+          }
+        });
+
+        // Botões Sim/Não (Passo 5)
+        bindYesNoGroup(els.cadunicoBtnGroup, 'cadunicoChoice', els.cadunicoDetalheWrap, els.cadunicoDetalheInput);
+        bindYesNoGroup(els.alergiaBtnGroup, 'alergiaChoice', els.alergiaDetalheWrap, els.alergiaDetalheInput);
+        bindYesNoGroup(els.medicamentoBtnGroup, 'medicamentoChoice', els.medicamentoDetalheWrap, els.medicamentoDetalheInput);
+
+        // LGPD e Modal
+        els.lgpdCheckbox.addEventListener('change', function () {
+          if (els.lgpdCheckbox.checked) {
+            els.lgpdBox.classList.remove('is-invalid');
+            setFeedback(els.lgpdFeedback, '', null);
+            hideStepAlert();
+          }
+        });
+        els.openLgpdModalBtn.addEventListener('click', function (e) {
+          e.preventDefault();
+          e.stopPropagation();
+          openLgpdModal();
+        });
+        els.closeLgpdModalX.addEventListener('click', closeLgpdModal);
+        els.closeLgpdModalBtn.addEventListener('click', closeLgpdModal);
+        els.acceptLgpdModalBtn.addEventListener('click', function () {
+          els.lgpdCheckbox.checked = true;
+          els.lgpdBox.classList.remove('is-invalid');
+          setFeedback(els.lgpdFeedback, '', null);
+          hideStepAlert();
+          closeLgpdModal();
+        });
+        els.lgpdModal.addEventListener('click', function (e) {
+          if (e.target === els.lgpdModal) closeLgpdModal();
+        });
+        document.addEventListener('keydown', function (e) {
+          if (els.lgpdModal.classList.contains('hidden')) return;
+          if (e.key === 'Escape') {
+            closeLgpdModal();
+            return;
+          }
+          if (e.key === 'Tab') {
+            const focusables = Array.from(
+              els.lgpdModal.querySelectorAll('button:not([disabled]), [href], input:not([disabled]), [tabindex]:not([tabindex="-1"])')
+            );
+            if (focusables.length === 0) return;
+            const first = focusables[0];
+            const last = focusables[focusables.length - 1];
+            if (e.shiftKey && document.activeElement === first) {
+              e.preventDefault();
+              last.focus();
+            } else if (!e.shiftKey && document.activeElement === last) {
+              e.preventDefault();
+              first.focus();
+            }
+          }
+        });
+
+        // Envio e Comprovante
+        els.form.addEventListener('submit', handleFormSubmit);
+        els.printReceiptBtn.addEventListener('click', function () { window.print(); });
+        els.backToExistingFromReceiptBtn.addEventListener('click', showExistingCandidateScreen);
+        els.newRegistrationBtn.addEventListener('click', resetForNewRegistration);
+        els.copyProtocolBtn.addEventListener('click', handleCopyProtocol);
+      }
+
+      document.addEventListener('DOMContentLoaded', function () {
+        els.dataNascimentoInput.max = getTodayISO();
+        bindEvents();
+        loadCoursesAndClasses();
+      });
+    })();
+  </script>
+</body>
+</html>
